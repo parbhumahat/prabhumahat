@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Prabhu Mahat Chhetry | Full Stack Developer & Photographer</title>
+  <meta name="description" content="Official personal portfolio of Parbhu Mahat Chhetry. Senior Full Stack Web Developer, Creative Photographer, Tech Expert, and Managing Director of Radio Sunwal. Combining technology, creativity, and digital media in Nepal.">
+  <meta name="keywords" content="Parbhu Mahat Chhetry, Web Developer Nepal, Full Stack Developer, Photographer Sunwal, Radio Sunwal Managing Director, UI UX Designer, Nepal Technology Expert">
+  <meta name="author" content="Parbhu Mahat Chhetry">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Parbhu Mahat Chhetry | Premium Personal Brand Portfolio">
+  <meta property="og:description" content="Discover the digital craft, creative photography, and leadership journey of Parbhu Mahat Chhetry.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop">
+  
+  <!-- Links -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="image/icon-modified.png">
+</head>
+<body>
+
+  <!-- 14. Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="loader-logo">PMC<span>.</span></div>
+    <div class="loader-ring-container">
+      <div class="loader-ring loader-ring-1"></div>
+      <div class="loader-ring loader-ring-2"></div>
+      <div class="loader-ring loader-ring-3"></div>
+    </div>
+    <div class="loader-text">Initializing Experience</div>
+    <div class="loader-progress">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-text" id="loader-percentage" style="margin-top: 0.5rem; font-size: 0.75rem;">0%</div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Mouse Ambient Glow Tracker -->
+  <div class="mouse-glow-bg"></div>
+
+  <!-- Sticky Navbar & Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="nav-logo">
+        PMC<span class="logo-dot"></span>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero" class="active" id="link-hero">Home</a></li>
+        <li><a href="#about" id="link-about">About</a></li>
+        <li><a href="#skills" id="link-skills">Skills</a></li>
+        <li><a href="#services" id="link-services">Services</a></li>
+        <li><a href="#portfolio" id="link-portfolio">Portfolio</a></li>
+        <li><a href="#photography" id="link-photography">Photography</a></li>
+        <li><a href="#radio" id="link-radio">Radio Sunwal</a></li>
+        <li><a href="#experience" id="link-experience">Timeline</a></li>
+        <li><a href="#contact" id="link-contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero" id="hero">
+    <!-- Animated Particle Background Canvas -->
+    <canvas class="hero-bg-canvas" id="hero-canvas"></canvas>
+    
+    <div class="hero-shapes">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+    </div>
+    
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline reveal reveal-down">
+          <span class="hero-tagline-bar"></span>
+          <span>Welcome to my digital realm</span>
+        </div>
+        
+        <h1 class="hero-title reveal reveal-up">
+          I am <span>Parbhu Mahat</span> Chhetry
+        </h1>
+        
+        <!-- Typing Title Animation Area -->
+        <div class="typing-container reveal reveal-up delay-100">
+          <span class="typed-text" id="typed-text"></span>
+          <span class="typing-cursor"></span>
+        </div>
+        
+        <p class="hero-description reveal reveal-up delay-200">
+          A passionate technologist, full stack developer, photographer, and creative director from Nepal. I bridge the gap between design and high-performance engineering to craft premium digital solutions.
+        </p>
+        
+        <div class="hero-buttons reveal reveal-up delay-300">
+          <a href="#portfolio" class="btn btn-primary" id="hero-btn-work">
+            <span>View My Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+            Contact Me
+          </a>
+        </div>
+        
+        <div class="hero-socials reveal reveal-up delay-400">
+          <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Profile Area with Glowing/Morph border -->
+      <div class="hero-image-wrapper reveal reveal-scale delay-300">
+        <div class="profile-hex-container">
+          <div class="profile-backdrop-glow"></div>
+          <div class="profile-border-frame"></div>
+          <div class="profile-img-mask">
+            <img src="image/hero.jpg" alt="Parbhu Mahat Chhetry Profile Shot">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About Me Section">
+      <span>Scroll Down</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- 2. About Me Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal reveal-left">
+          <div class="profile-hex-container" style="width: 100%; max-width: 380px; height: 420px; margin: 0 auto;">
+            <div class="profile-backdrop-glow" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);"></div>
+            <div class="profile-border-frame" style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;"></div>
+            <div class="profile-img-mask" style="width: 100%; max-width: 350px; height: 390px; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;">
+              <img src="image/icon.jpg" alt="Parbhu Mahat Chhetry Professional Visual">
+            </div>
+          </div>
+          
+          <div class="about-experience-badge reveal reveal-scale delay-200">
+            <div class="badge-num" id="exp-num">3+</div>
+            <div class="badge-text">Years in Tech</div>
+          </div>
+        </div>
+        
+        <div class="about-info">
+          <div class="section-header reveal reveal-up">
+            <span class="section-subtitle">Biography</span>
+            <h2 class="section-title">Bridging <span>Creativity & Engineering</span></h2>
+            <div class="section-title-line"></div>
+          </div>
+          
+          <h3 class="about-intro reveal reveal-up delay-100">
+            I am a passionate technology enthusiast, web developer, photographer and digital creator from <span>Nepal</span>.
+          </h3>
+          
+          <div class="about-paragraphs reveal reveal-up delay-200">
+            <p>
+              I specialize in creating modern, responsive, and user-friendly websites with clean design and excellent user experience. Over the last decade, I have honed my skills in web development to craft robust frontend systems and secure backend infrastructures.
+            </p>
+            <p>
+              Along with web development, I have a strong passion for photography, technology innovation, and digital media. I am also the Managing Director of Radio Sunwal, where I direct digital media operations, manage technology integrations, and spearhead creative innovation projects in Nepal.
+            </p>
+            <p>
+              My ultimate vision is to combine cutting-edge technology, creative photography, and rich multimedia storytelling to build meaningful and highly impactful digital experiences for global clients.
+            </p>
+          </div>
+          
+          <div class="about-highlights">
+            <div class="about-highlight-card glass-panel reveal reveal-up delay-300">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h4 class="highlight-title">Full-Stack Architect</h4>
+              <p class="highlight-desc">Building resilient database layouts and elegant responsive layouts.</p>
+            </div>
+            
+            <div class="about-highlight-card glass-panel reveal reveal-up delay-400">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              </div>
+              <h4 class="highlight-title">Visual Storyteller</h4>
+              <p class="highlight-desc">Capturing professional portraits, events, and cinematic nature imagery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal reveal-up" style="text-align: center;">
+        <span class="section-subtitle">My Expertise</span>
+        <h2 class="section-title">Technical & <span>Creative Skills</span></h2>
+        <div class="section-title-line" style="margin: 1rem auto 0 auto;"></div>
+      </div>
+      
+      <div class="skills-grid">
+        <!-- HTML5 -->
+        <div class="skill-card glass-panel skill-html reveal reveal-up">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <span class="skill-pct">95%</span>
+          </div>
+          <h4 class="skill-name">HTML5</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="95"></div>
+          </div>
+        </div>
+        
+        <!-- CSS3 -->
+        <div class="skill-card glass-panel skill-css reveal reveal-up delay-100">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <h4 class="skill-name">CSS3</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="90"></div>
+          </div>
+        </div>
+        
+        <!-- JavaScript -->
+        <div class="skill-card glass-panel skill-js reveal reveal-up delay-200">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <h4 class="skill-name">JavaScript</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="85"></div>
+          </div>
+        </div>
+        
+        <!-- Responsive Design -->
+        <div class="skill-card glass-panel skill-responsive reveal reveal-up delay-300">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <span class="skill-pct">95%</span>
+          </div>
+          <h4 class="skill-name">Responsive Web Design</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="95"></div>
+          </div>
+        </div>
+        
+        <!-- UI/UX Design -->
+        <div class="skill-card glass-panel skill-uiux reveal reveal-up delay-400">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <h4 class="skill-name">UI/UX Design</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="88"></div>
+          </div>
+        </div>
+        
+        <!-- Figma -->
+        <div class="skill-card glass-panel skill-figma reveal reveal-up">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5zM12 16h3.5a3.5 3.5 0 1 1-3.5 3.5V16zM12 9h3.5A3.5 3.5 0 1 0 12 5.5V9zM12 12.5a3.5 3.5 0 1 1 3.5-3.5H12v3.5z"></path></svg>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <h4 class="skill-name">Figma</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="85"></div>
+          </div>
+        </div>
+        
+        <!-- Git & GitHub -->
+        <div class="skill-card glass-panel skill-git reveal reveal-up delay-100">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="6" y1="9" x2="6" y2="15"></line><path d="M9 18h9"></path></svg>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <h4 class="skill-name">Git & GitHub</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="80"></div>
+          </div>
+        </div>
+        
+        <!-- Website Optimization -->
+        <div class="skill-card glass-panel skill-opt reveal reveal-up delay-200">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <h4 class="skill-name">Website Optimization</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="90"></div>
+          </div>
+        </div>
+        
+        <!-- Photography -->
+        <div class="skill-card glass-panel skill-photo reveal reveal-up delay-300">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <span class="skill-pct">92%</span>
+          </div>
+          <h4 class="skill-name">Photography</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="92"></div>
+          </div>
+        </div>
+        
+        <!-- Photo Editing -->
+        <div class="skill-card glass-panel skill-editing reveal reveal-up delay-400">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="21" y1="12" x2="9" y2="12"></line><line x1="12" y1="21" x2="12" y2="9"></line></svg>
+            </div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <h4 class="skill-name">Photo Editing</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="88"></div>
+          </div>
+        </div>
+        
+        <!-- Digital Media -->
+        <div class="skill-card glass-panel skill-media reveal reveal-up">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <h4 class="skill-name">Digital Media</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="90"></div>
+          </div>
+        </div>
+        
+        <!-- Technology Management -->
+        <div class="skill-card glass-panel skill-mgmt reveal reveal-up delay-100">
+          <div class="skill-meta">
+            <div class="skill-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <span class="skill-pct">94%</span>
+          </div>
+          <h4 class="skill-name">Technology Management</h4>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-pct="94"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-subtitle">What I Offer</span>
+        <h2 class="section-title">Premium <span>Client Services</span></h2>
+        <div class="section-title-line"></div>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Website Development -->
+        <div class="service-card glass-panel reveal reveal-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h4 class="service-title">Website Development</h4>
+          <p class="service-desc">Complete end-to-end development of dynamic and content-rich websites from conceptual phase to server deployment.</p>
+          <ul class="service-bullets">
+            <li><span></span>Custom backend integration</li>
+            <li><span></span>Database configuration</li>
+            <li><span></span>API integrations</li>
+          </ul>
+        </div>
+        
+        <!-- Frontend Development -->
+        <div class="service-card glass-panel reveal reveal-up delay-100">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h4 class="service-title">Frontend Development</h4>
+          <p class="service-desc">Building lightning-fast, secure, and visually breathtaking client-side interfaces adhering to strict code standards.</p>
+          <ul class="service-bullets">
+            <li><span></span>Component modularity</li>
+            <li><span></span>Interactive hover states</li>
+            <li><span></span>Smooth animation timing</li>
+          </ul>
+        </div>
+        
+        <!-- UI/UX Design -->
+        <div class="service-card glass-panel reveal reveal-up delay-200">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4 class="service-title">UI/UX Design</h4>
+          <p class="service-desc">Designing user journeys that balance creative visual identity, micro-interactions, accessibility and flawless layout consistency.</p>
+          <ul class="service-bullets">
+            <li><span></span>Figma wireframing</li>
+            <li><span></span>Prototyping flows</li>
+            <li><span></span>Visual identity design</li>
+          </ul>
+        </div>
+        
+        <!-- Business Website Creation -->
+        <div class="service-card glass-panel reveal reveal-up delay-300">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
+          </div>
+          <h4 class="service-title">Business Website Creation</h4>
+          <p class="service-desc">Providing businesses with highly optimized, trustworthy websites that drive search exposure and maximize product sales.</p>
+          <ul class="service-bullets">
+            <li><span></span>SEO integration</li>
+            <li><span></span>Speed performance metrics</li>
+            <li><span></span>Responsive conversion layouts</li>
+          </ul>
+        </div>
+        
+        <!-- Portfolio Website Creation -->
+        <div class="service-card glass-panel reveal reveal-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <h4 class="service-title">Portfolio Website Creation</h4>
+          <p class="service-desc">Designing ultra-customized visual portfolios for artists, developers, and corporate executives to establish their digital footprint.</p>
+          <ul class="service-bullets">
+            <li><span></span>Personalized custom styling</li>
+            <li><span></span>Dynamic asset showcases</li>
+            <li><span></span>Buttery interactive animations</li>
+          </ul>
+        </div>
+        
+        <!-- Photography Services -->
+        <div class="service-card glass-panel reveal reveal-up delay-100">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          </div>
+          <h4 class="service-title">Photography Services</h4>
+          <p class="service-desc">Professional lens capture specializing in premium portrait shoots, majestic nature frames, corporate gatherings, and creative layouts.</p>
+          <ul class="service-bullets">
+            <li><span></span>High-res professional grading</li>
+            <li><span></span>Light balance correction</li>
+            <li><span></span>Dynamic scene curation</li>
+          </ul>
+        </div>
+        
+        <!-- Digital Content Creation -->
+        <div class="service-card glass-panel reveal reveal-up delay-200">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+          <h4 class="service-title">Digital Content Creation</h4>
+          <p class="service-desc">Developing modern multimedia packages combining audio, photo assets, and visual videos tailored for digital platforms.</p>
+          <ul class="service-bullets">
+            <li><span></span>Promotional media videos</li>
+            <li><span></span>Creative digital storytelling</li>
+            <li><span></span>Podcasting & audio mixing</li>
+          </ul>
+        </div>
+        
+        <!-- Technology Consulting -->
+        <div class="service-card glass-panel reveal reveal-up delay-300">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h4 class="service-title">Technology Consulting</h4>
+          <p class="service-desc">Consulting companies on system infrastructure, modern technology trends, automation, and digital broadcast systems.</p>
+          <ul class="service-bullets">
+            <li><span></span>System scale architecture</li>
+            <li><span></span>Digital broadcast guidance</li>
+            <li><span></span>Software tool audits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal reveal-up" style="text-align: center;">
+        <span class="section-subtitle">Showcase</span>
+        <h2 class="section-title">My <span>Portfolio Projects</span></h2>
+        <div class="section-title-line" style="margin: 1rem auto 0 auto;"></div>
+      </div>
+      
+      <!-- Classification Filters -->
+      <div class="portfolio-filters reveal reveal-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="photo">Photography Collection</button>
+        <button class="filter-btn" data-filter="media">Digital Media</button>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Project 1: Coffee Shop Website -->
+        <div class="portfolio-card glass-panel reveal reveal-up" data-category="web">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=600&auto=format&fit=crop" alt="Coffee Shop Website Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Project</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Web Development</span>
+            <h4 class="portfolio-title">Coffee Shop Website</h4>
+            <p class="portfolio-desc">A premium responsive interface for an artisanal cafe featuring local ordering, reservation tracking, and customizable visual templates.</p>
+            <a href="#contact" class="portfolio-link">
+              <span>View Case Study</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 2: Business Website -->
+        <div class="portfolio-card glass-panel reveal reveal-up delay-100" data-category="web">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop" alt="Business Website Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Project</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Web Development</span>
+            <h4 class="portfolio-title">Corporate Business Website</h4>
+            <p class="portfolio-desc">High-performance corporate platform built for search visibility, speed metrics, robust services layouts, and secure lead forms.</p>
+            <a href="#contact" class="portfolio-link">
+              <span>View Case Study</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 3: School Website -->
+        <div class="portfolio-card glass-panel reveal reveal-up delay-200" data-category="web">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop" alt="School Website Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Project</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Web Development</span>
+            <h4 class="portfolio-title">Academic School Website</h4>
+            <p class="portfolio-desc">An educational web portal supporting student updates, curriculum libraries, dynamic events schedules, and virtual campus tours.</p>
+            <a href="#contact" class="portfolio-link">
+              <span>View Case Study</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 4: Leo Club Website -->
+        <div class="portfolio-card glass-panel reveal reveal-up" data-category="web">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop" alt="Leo Club Website Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Project</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Web Development</span>
+            <h4 class="portfolio-title">Leo Club Youth Website</h4>
+            <p class="portfolio-desc">A non-profit community system developed for the Leo Club to manage charity drives, youth programs, and volunteer logs.</p>
+            <a href="#contact" class="portfolio-link">
+              <span>View Case Study</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 5: Personal Portfolio Website -->
+        <div class="portfolio-card glass-panel reveal reveal-up delay-100" data-category="web">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop" alt="Personal Portfolio Website Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Project</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Web Development</span>
+            <h4 class="portfolio-title">Interactive Portfolio Website</h4>
+            <p class="portfolio-desc">A top-tier design showcase displaying portfolio cards with tilt effects, custom cursors, and lightweight canvas particle meshes.</p>
+            <a href="#contact" class="portfolio-link">
+              <span>View Case Study</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 6: Photography Collection -->
+        <div class="portfolio-card glass-panel reveal reveal-up delay-200" data-category="photo">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d84a?q=80&w=600&auto=format&fit=crop" alt="Photography Collection Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Gallery</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Photography</span>
+            <h4 class="portfolio-title">Visual Landscape Gallery</h4>
+            <p class="portfolio-desc">An extensive curated catalog of high-resolution portrait, landscape, and events imagery captured on full-frame cameras.</p>
+            <a href="#photography" class="portfolio-link">
+              <span>View Gallery</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 7: Radio Sunwal Digital Projects -->
+        <div class="portfolio-card glass-panel reveal reveal-up" data-category="media">
+          <div class="portfolio-img-container">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=600&auto=format&fit=crop" alt="Radio Sunwal Digital Projects Preview">
+            <div class="portfolio-overlay">
+              <span class="btn btn-primary" style="padding: 0.7rem 1.4rem;">Explore Media</span>
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-tag">Digital Media</span>
+            <h4 class="portfolio-title">Radio Sunwal Digital Network</h4>
+            <p class="portfolio-desc">Modernizing technology systems at Radio Sunwal with cloud broadcast setups, web streaming portals, and mobile digital feeds.</p>
+            <a href="#radio" class="portfolio-link">
+              <span>Explore Radio Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Photography Section -->
+  <section class="photography" id="photography">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-subtitle">Visual Artistry</span>
+        <h2 class="section-title">Photography <span>Gallery</span></h2>
+        <div class="section-title-line"></div>
+      </div>
+      
+      <!-- Photography Category Filters -->
+      <div class="photography-filters reveal reveal-up">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+      </div>
+      
+      <!-- Bento Grid Photography Grid -->
+      <div class="photo-grid">
+        <!-- Photo 1: Portrait Male -->
+        <div class="photo-item reveal reveal-scale" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" alt="Professional Male Portrait Shot" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Portrait</span>
+            <h4 class="photo-title">Sleek Profile</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 2: Nature Mountains (Span 2 col) -->
+        <div class="photo-item reveal reveal-scale delay-100" data-category="nature">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Himalayan Mountain Range Nature" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Nature</span>
+            <h4 class="photo-title">Mountain Peak Majesty</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 3: Events concert -->
+        <div class="photo-item reveal reveal-scale delay-200" data-category="events">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop" alt="Digital Media Events Gathering" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Events</span>
+            <h4 class="photo-title">Digital Media Seminar</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 4: Creative sky -->
+        <div class="photo-item reveal reveal-scale" data-category="creative">
+          <img src="https://images.unsplash.com/photo-1502239608882-93b729c6af43?q=80&w=600&auto=format&fit=crop" alt="Creative Night Astrophotography" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Creative</span>
+            <h4 class="photo-title">Cosmic Stargazing</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 5: Nature Forest (Span 2 col) -->
+        <div class="photo-item reveal reveal-scale delay-100" data-category="nature">
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=600&auto=format&fit=crop" alt="Tropical Forest Woodland Nature" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Nature</span>
+            <h4 class="photo-title">Deep Forest Solitude</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 6: Portrait Female (Row Span 2 - Tall Card) -->
+        <div class="photo-item reveal reveal-scale delay-200" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Sleek Fashion Portrait Photography" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Portrait</span>
+            <h4 class="photo-title">Elegance in Frame</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 7: Events festival (Span 2 col) -->
+        <div class="photo-item reveal reveal-scale" data-category="events">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop" alt="Public Media Celebration Events" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Events</span>
+            <h4 class="photo-title">Socio-Creative Gathering</h4>
+          </div>
+        </div>
+        
+        <!-- Photo 8: Creative abstract background -->
+        <div class="photo-item reveal reveal-scale delay-100" data-category="creative">
+          <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=600&auto=format&fit=crop" alt="Creative Abstract Light Trails" class="photo-img">
+          <div class="photo-info">
+            <span class="photo-category">Creative</span>
+            <h4 class="photo-title">Ethereal Light Trails</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Gallery Modal Overlay -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="lightbox-img-wrapper">
+      <img src="" alt="Lightbox Zoomed View" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- 7. Radio Sunwal Section -->
+  <section class="radio" id="radio">
+    <div class="container">
+      <div class="glass-panel radio-showcase reveal reveal-up">
+        <div class="radio-grid">
+          <div class="radio-info-block reveal reveal-left">
+            <span class="radio-role-tag">Managing Director</span>
+            <h2 class="radio-title">Leadership & Innovation at <span>Radio Sunwal</span></h2>
+            <p class="radio-description">
+              As the Managing Director of Radio Sunwal, I combine digital technology with regional media broadcast workflows. My role centers around digital transformation, managing on-air and streaming server hardware, and orchestrating multimedia programs that empower the community in Nepal.
+            </p>
+            <p class="radio-description">
+              Through strategic integrations, we have launched online audio streaming portals, cloud broadcasting redundancy, and unified digital social feeds that expand our reach to global listeners. I lead our team in merging tech innovation, creative content production, and community-centric storytelling to build a robust broadcasting model.
+            </p>
+            <a href="#contact" class="btn btn-primary" id="radio-btn-collab">
+              <span>Inquire Collaboration</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+          
+          <div class="radio-visual-panel reveal reveal-right delay-200">
+            <div class="radio-visual-glow"></div>
+            <!-- Audio-equalizer visualization simulation -->
+            <div class="audio-wave-container">
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+              <div class="audio-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Experience Timeline -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal reveal-up" style="text-align: center;">
+        <span class="section-subtitle">Chronology</span>
+        <h2 class="section-title">My Professional <span>Journey</span></h2>
+        <div class="section-title-line" style="margin: 1rem auto 0 auto;"></div>
+      </div>
+      
+      <div class="timeline-container">
+        <!-- Item 1: Managing Director -->
+        <div class="timeline-item reveal reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-year">2021 - Present</span>
+            <h4 class="timeline-role">Managing Director</h4>
+            <div class="timeline-org">Radio Sunwal <span></span> Nepal</div>
+            <p class="timeline-body">Leading creative operations, digital media transition, on-air technology infrastructure, and regional community programming.</p>
+          </div>
+        </div>
+        
+        <!-- Item 2: Technology Expert -->
+        <div class="timeline-item reveal reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-year">2018 - Present</span>
+            <h4 class="timeline-role">Technology Specialist</h4>
+            <div class="timeline-org">Freelance Consultant <span></span> Tech Solutions</div>
+            <p class="timeline-body">Auditing IT systems, implementing database architecture, and consulting on cloud solutions and radio-broadcast hardware arrays.</p>
+          </div>
+        </div>
+        
+        <!-- Item 3: Senior Web Developer -->
+        <div class="timeline-item reveal reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-year">2015 - Present</span>
+            <h4 class="timeline-role">Full Stack Developer</h4>
+            <div class="timeline-org">PMC Web Studio <span></span> Global Clients</div>
+            <p class="timeline-body">Architecting modern bespoke websites, responsive web apps, optimization pipelines, and customized Figma UI mockups.</p>
+          </div>
+        </div>
+        
+        <!-- Item 4: Photographer & Content Creator -->
+        <div class="timeline-item reveal reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-year">2013 - Present</span>
+            <h4 class="timeline-role">Creative Photographer</h4>
+            <div class="timeline-org">Independent Creator <span></span> Nepal & Abroad</div>
+            <p class="timeline-body">Capturing deep human stories, corporate events, breathtaking natural landscapes, and cataloging digital photo assets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Achievements / Stats Section -->
+  <section class="stats-section" id="stats">
+    <div class="container stats-grid">
+      <!-- Stat 1 -->
+      <div class="stat-card glass-panel reveal reveal-up">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <div class="stat-number" data-target="150">0<span class="stat-suffix">+</span></div>
+        <div class="stat-title">Projects Completed</div>
+      </div>
+      
+      <!-- Stat 2 -->
+      <div class="stat-card glass-panel reveal reveal-up delay-100">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
+        <div class="stat-number" data-target="80">0<span class="stat-suffix">+</span></div>
+        <div class="stat-title">Websites Created</div>
+      </div>
+      
+      <!-- Stat 3 -->
+      <div class="stat-card glass-panel reveal reveal-up delay-200">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        </div>
+        <div class="stat-number" data-target="500">0<span class="stat-suffix">+</span></div>
+        <div class="stat-title">Photography Works</div>
+      </div>
+      
+      <!-- Stat 4 -->
+      <div class="stat-card glass-panel reveal reveal-up delay-300">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </div>
+        <div class="stat-number" data-target="45">0<span class="stat-suffix">+</span></div>
+        <div class="stat-title">Digital Projects</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Let's Craft <span>Something Epic</span></h2>
+        <div class="section-title-line"></div>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info-panel reveal reveal-left">
+          <p class="contact-intro-text">
+            Have a project in mind, want to explore a photography collaboration, or discuss media technology solutions? Drop me a line! I will get back to you within 24 hours.
+          </p>
+          
+          <div class="contact-details-list">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-item-details">
+                <span class="contact-item-label">Direct Email</span>
+                <a href="mailto:prabhumahatchhetry@gmail.com" class="contact-item-value">prabhumahatchhetry@gmail.com</a>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-item-details">
+                <span class="contact-item-label">Contact Number</span>
+                <a href="tel:+9779800000000" class="contact-item-value">+977 980-0000000</a>
+              </div>
+            </div>
+            
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-item-details">
+                <span class="contact-item-label">My Location</span>
+                <span class="contact-item-value">Sunwal, Nawalparasi, Nepal</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-social-block">
+            <h4 class="contact-social-label">Follow My Channels</h4>
+            <div class="contact-socials-grid">
+              <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-panel reveal reveal-right delay-200">
+          <form class="contact-form glass-panel" id="contact-form">
+            <!-- Glass Feedback Success Overlay -->
+            <div class="form-status-overlay" id="form-status-overlay">
+              <div class="status-icon-success">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="status-msg-title">Message Received!</h4>
+              <p class="status-msg-body">Thank you for writing, Parbhu will review your inquiry and follow up within 24 hours.</p>
+            </div>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <input type="text" id="form-name" class="form-input" placeholder=" " required autocomplete="name">
+                <label for="form-name" class="form-label">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="form-email" class="form-input" placeholder=" " required autocomplete="email">
+                <label for="form-email" class="form-label">Email Address</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="form-subject" class="form-input" placeholder=" " required autocomplete="off">
+              <label for="form-subject" class="form-label">Inquiry Subject</label>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
+              <label for="form-message" class="form-label">Your Message...</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary form-submit-btn" id="form-submit-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo footer-logo">
+            PMC<span class="logo-dot"></span>
+          </a>
+          <p class="footer-brand-desc">
+            Combining technology, creative photography, and rich media stories to construct high-performance digital experiences from Nepal.
+          </p>
+        </div>
+        
+        <div class="footer-nav-block">
+          <div class="footer-nav-col">
+            <h4 class="footer-nav-title">Navigation</h4>
+            <ul class="footer-nav-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-nav-col">
+            <h4 class="footer-nav-title">Works</h4>
+            <ul class="footer-nav-links">
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#photography">Photography</a></li>
+              <li><a href="#radio">Radio Sunwal</a></li>
+              <li><a href="#experience">Timeline</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Parbhu Mahat Chhetry. All rights reserved.</p>
+        <p class="footer-copyright" style="font-family: var(--font-mono); font-size: 0.75rem;">
+          Designed & Engineered with <span>❤</span> in Nepal
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Glowing Back to Top Floating Button -->
+  <button class="back-to-top" aria-label="Scroll back to top" id="back-to-top-btn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <!-- Core Scripts -->
+  <script src="./script.js"></script>
+</body>
+</html>

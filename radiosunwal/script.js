@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- APPLICATION STATE ---
   const state = {
     lang: localStorage.getItem('sunwal_lang') || 'en',
-    audioUrl: 'https://uk20freenew.listen2myradio.com/live.mp3?typeportmount=ice_35826_stream',
+    audioUrl: 'https://wywxzbpuciavotvckkno.supabase.co/functions/v1/radio-stream-proxy?url=http%3A%2F%2F78.129.241.110%3A35826%2Fstream',
     audio: null,
     isPlaying: false,
     isMuted: false,

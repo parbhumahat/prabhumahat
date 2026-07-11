@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO & General Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Radio Sunwal 90.7 FM - Official Website. Listen to Radio Sunwal Live, explore our daily community programs, weekly schedules, team, and local broadcasting. Your voice, your community.">
+  <meta name="keywords" content="Radio Sunwal, Radio Sunwal Live, Sunwal FM, 90.7 FM, Nawalparasi Radio, Nepali Community Radio, Listen Live, Radio Nepal">
+  <meta name="author" content="Parbhu">
+  <title>Radio Sunwal 90.7 FM | Official Website</title>
+  <link rel="icon" type="image/gif" href="img/RADIO LOGO.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- 1. SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- 2. LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="loader-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-radio" style="width: 36px; height: 36px; color: #E30613;">
+        <circle cx="12" cy="12" r="2"></circle>
+        <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+      </svg>
+    </div>
+    <div class="loader-wave">
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- 3. AUTOPLAY BLOCKED OVERLAY -->
+  <div id="autoplay-overlay" class="hidden">
+    <div class="overlay-content">
+      <div class="overlay-pulse">
+        <svg viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </div>
+      <h2>
+        <span class="lang-en">Click to Start Live Radio</span>
+        <span class="lang-ne">प्रत्यक्ष रेडियो सुरु गर्नुहोस्</span>
+      </h2>
+      <p>
+        <span class="lang-en">Experience the premium HD sound of Radio Sunwal 90.7 FM directly in your browser. Connection is fast and secure.</span>
+        <span class="lang-ne">रेडियो सुनवल ९०.७ एफ.एम. को उत्कृष्ट एचडी आवाज सीधा आफ्नो ब्राउजरमा अनुभव गर्नुहोस्। यो सुरक्षित र तीव्र छ।</span>
+      </p>
+      <button id="overlay-start-btn" class="overlay-btn">
+        <span class="lang-en">Listen Live Now</span>
+        <span class="lang-ne">अहिले प्रत्यक्ष सुन्नुहोस्</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 4. HEADER NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="2"></circle>
+            <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span>RADIO</span> SUNWAL
+          <span class="logo-freq">90.7 FM</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu-list">
+        <a href="#home" class="nav-link active">
+          <span class="lang-en">Home</span>
+          <span class="lang-ne">गृहपृष्ठ</span>
+        </a>
+        <a href="#listen" class="nav-link">
+          <span class="lang-en">Listen Live</span>
+          <span class="lang-ne">प्रत्यक्ष सुन्नुहोस्</span>
+        </a>
+        <a href="#programs" class="nav-link">
+          <span class="lang-en">Programs</span>
+          <span class="lang-ne">कार्यक्रमहरू</span>
+        </a>
+        <a href="#schedule" class="nav-link">
+          <span class="lang-en">Schedule</span>
+          <span class="lang-ne">समय तालिका</span>
+        </a>
+        <a href="#about" class="nav-link">
+          <span class="lang-en">About</span>
+          <span class="lang-ne">हाम्रो बारेमा</span>
+        </a>
+        <a href="#team" class="nav-link">
+          <span class="lang-en">Team</span>
+          <span class="lang-ne">टोली</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-ne">सम्पर्क</span>
+        </a>
+      </nav>
+
+      <!-- Action Button & Lang Switcher -->
+      <div class="nav-actions">
+        <button class="lang-btn" id="lang-switch-btn">🇳🇵 नेपाली</button>
+        <a href="#listen" class="btn-nav-listen">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px;">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span class="lang-en">Listen</span>
+          <span class="lang-ne">सुन्नुहोस्</span>
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-open">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-close" style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 5. HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-glow"></div>
+    <div class="studio-waves">
+      <div class="wave-ring"></div>
+      <div class="wave-ring"></div>
+      <div class="wave-ring"></div>
+      <div class="wave-ring"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="live-badge">
+          <div class="live-dot"></div>
+          <span>
+            <span class="lang-en">Live Now</span>
+            <span class="lang-ne">अहिले प्रत्यक्ष</span>
+          </span>
+        </div>
+        <h1 class="hero-title">
+          <span>RADIO SUNWAL</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="lang-en">Your Voice, <strong>Your Community.</strong> Broadcasting high-fidelity entertainment, news, and programs from Sunwal, Nepal.</span>
+          <span class="lang-ne">तपाईंको आवाज, <strong>तपाईंको समुदाय।</strong> सुनवल, नवलपरासीबाट उच्च-गुणस्तरको मनोरञ्जन, जानकारी र कार्यक्रमहरूको प्रत्यक्ष प्रसारण।</span>
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-hero-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;" class="icon-play">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; display:none;" class="icon-pause">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+            <span class="btn-hero-text-en lang-en">Play Live Radio</span>
+            <span class="btn-hero-text-ne lang-ne">प्रत्यक्ष रेडियो सुन्नुहोस्</span>
+          </button>
+          <a href="#programs" class="btn-hero-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span class="lang-en">Explore Programs</span>
+            <span class="lang-ne">कार्यक्रमहरू हेर्नुहोस्</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visualizer">
+        <div class="visualizer-disk">
+          <div class="disk-cover">
+            <div class="disk-center"></div>
+          </div>
+        </div>
+              </div>
+    </div>
+  </section>
+ 
+  <!-- 6. LIVE RADIO PLAYER SECTION (MOST IMPORTANT FEATURE) -->
+  <section id="listen" class="section-player">
+    <div class="player-container reveal">
+      <div class="player-art-wrap">
+        <img src="img/rikon.png" alt="Radio Sunwal On Air" class="player-art" referrerPolicy="no-referrer">
+        <div class="player-art-overlay">
+          <div class="player-badge-live">ON Air</div>
+        </div>
+      </div>
+
+      <div class="player-main-info">
+        <div class="player-meta-label">
+          <span class="lang-en">NOW PLAYING</span>
+          <span class="lang-ne">अहिले बजिरहेको</span>
+        </div>
+        <h2 class="player-station-title">
+          <span class="lang-en">Radio Sunwal Live Broadcast</span>
+          <span class="lang-ne">रेडियो सुनवल प्रत्यक्ष प्रसारण</span>
+        </h2>
+        <p class="player-show-name">
+          <span class="lang-en">Serving you high quality stereo sound live from Sunwal</span>
+          <span class="lang-ne">सुनवलबाट तपाईंको लागि उच्च गुणस्तरको स्टेरियो ध्वनिको प्रत्यक्ष प्रसारण</span>
+        </p>
+
+        <div class="player-time-container">
+          <div class="player-time-badge">
+            <span id="player-time-elapsed">00:00</span>
+            <span class="live-separator">/</span>
+            <span class="live-tag">LIVE</span>
+          </div>
+        </div>
+
+        <!-- Player Controls -->
+        <div class="player-controls-row">
+          <button class="btn-play-toggle" aria-label="Toggle Play">
+            <svg viewBox="0 0 24 24" class="icon-play">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg viewBox="0 0 24 24" class="icon-pause">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+          </button>
+
+          <!-- Volume Bar -->
+          <div class="volume-container">
+            <button class="btn-mute" aria-label="Toggle Mute">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vol-icon">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mute-icon" style="display: none;">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </button>
+            <div class="volume-slider-wrap">
+              <div class="volume-progress" style="width: 80%;"></div>
+              <input type="range" min="0" max="1" step="0.05" value="0.8" class="volume-slider" aria-label="Adjust Volume">
+            </div>
+            <span class="vol-percentage" id="vol-percentage-main">80%</span>
+          </div>
+        </div>
+
+        <!-- Info Blocks -->
+        <div class="player-secondary-info">
+          <div class="info-block">
+            <span class="info-block-label">
+              <span class="lang-en">Stream Status</span>
+              <span class="lang-ne">प्रसारण अवस्था</span>
+            </span>
+            <span class="info-block-val status-connected">
+              <span class="lang-en" id="main-status-label-en">Connected</span>
+              <span class="lang-ne" id="main-status-label-ne">सम्पर्क भयो</span>
+            </span>
+          </div>
+          <div class="info-block">
+            <span class="info-block-label">
+              <span class="lang-en">Next Program</span>
+              <span class="lang-ne">अर्को कार्यक्रम</span>
+            </span>
+            <span class="info-block-val">
+              <span class="lang-en">Heartbeat Beats</span>
+              <span class="lang-ne">मनका कुरा</span>
+            </span>
+          </div>
+          <div class="info-block">
+            <span class="info-block-label">
+              <span class="lang-en">Listeners</span>
+              <span class="lang-ne">श्रोताहरू</span>
+            </span>
+            <span class="info-block-val">
+              <span class="lang-en" id="listener-count-en">1,248 Active</span>
+              <span class="lang-ne" id="listener-count-ne">१,२४८ सक्रिय</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. UPCOMING PROGRAMS SECTION -->
+  <section id="programs" class="section-programs">
+    <div class="section-title-wrap reveal">
+      <span class="section-subtitle">
+        <span class="lang-en">Featured Programs</span>
+        <span class="lang-ne">विशेष कार्यक्रमहरू</span>
+      </span>
+      <h2 class="section-title">
+        <span class="lang-en">Explore Our Radio Shows</span>
+        <span class="lang-ne">हाम्रा रेडियो कार्यक्रमहरू</span>
+      </h2>
+    </div>
+
+    <div class="programs-grid">
+      <!-- Card 1 -->
+      <div class="program-card reveal">
+        <div class="program-img-wrap">
+          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=600&auto=format&fit=crop" alt="Morning sunshine show" class="program-img" referrerPolicy="no-referrer">
+          <span class="card-badge badge-live">
+            <span class="lang-en">LIVE NOW</span>
+            <span class="lang-ne">अहिले प्रत्यक्ष</span>
+          </span>
+        </div>
+        <div class="program-details">
+          <div class="program-meta">
+            <span>06:00 AM - 08:00 AM</span>
+            <span>
+              <span class="lang-en">Everyday</span>
+              <span class="lang-ne">दैनिक</span>
+            </span>
+          </div>
+          <h3 class="program-name">
+            <span class="lang-en">Morning Sunshine</span>
+            <span class="lang-ne">बिहानी किरण</span>
+          </h3>
+          <p class="program-host">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <span class="lang-en">With Host Suman Sapkota</span>
+              <span class="lang-ne">प्रस्तोता सुमन सापकोटा</span>
+            </span>
+          </p>
+          <p class="program-desc">
+            <span class="lang-en">Start your day with refreshing local updates, morning tunes, and inspiring stories from our local community in Sunwal.</span>
+            <span class="lang-ne">सुनवल स्थानीय समुदायका ताजा समाचार, बिहानी सङ्गीत र प्रेरक कथाहरूका साथ आफ्नो दिनको ऊर्जावान सुरुवात गर्नुहोस्।</span>
+          </p>
+          <div class="program-footer">
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>2 Hours</span>
+            </span>
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Nepali</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="program-card reveal">
+        <div class="program-img-wrap">
+          <img src="https://images.unsplash.com/photo-1487180142328-0c4e37023af5?q=80&w=600&auto=format&fit=crop" alt="Retro Melodies" class="program-img" referrerPolicy="no-referrer">
+          <span class="card-badge badge-upcoming">
+            <span class="lang-en">UPCOMING</span>
+            <span class="lang-ne">आउँदैछ</span>
+          </span>
+        </div>
+        <div class="program-details">
+          <div class="program-meta">
+            <span>11:00 AM - 01:00 PM</span>
+            <span>
+              <span class="lang-en">Mon, Wed, Fri</span>
+              <span class="lang-ne">सोम, बुध, शुक्र</span>
+            </span>
+          </div>
+          <h3 class="program-name">
+            <span class="lang-en">Retro Melodies</span>
+            <span class="lang-ne">सदाबहार सङ्गीत</span>
+          </h3>
+          <p class="program-host">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <span class="lang-en">With DJ Rohit</span>
+              <span class="lang-ne">प्रस्तोता डीजे रोहित</span>
+            </span>
+          </p>
+          <p class="program-desc">
+            <span class="lang-en">A nostalgic journey through timeless musical hits and classic golden melodies of Nepali and English music.</span>
+            <span class="lang-ne">नेपाली र अंग्रेजी सदाबहार सङ्गीत र पुराना सुनौला धुनहरूको माध्यमबाट एक सुमधुर नोस्टाल्जिक यात्रा।</span>
+          </p>
+          <div class="program-footer">
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>2 Hours</span>
+            </span>
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>EN / NE</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="program-card reveal">
+        <div class="program-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop" alt="Sunwal Voice" class="program-img" referrerPolicy="no-referrer">
+          <span class="card-badge badge-upcoming">
+            <span class="lang-en">UPCOMING</span>
+            <span class="lang-ne">आउँदैछ</span>
+          </span>
+        </div>
+        <div class="program-details">
+          <div class="program-meta">
+            <span>03:00 PM - 04:30 PM</span>
+            <span>
+              <span class="lang-en">Tue, Thu</span>
+              <span class="lang-ne">मङ्गल, बिही</span>
+            </span>
+          </div>
+          <h3 class="program-name">
+            <span class="lang-en">Sunwal Voice</span>
+            <span class="lang-ne">सुनवल आवाज</span>
+          </h3>
+          <p class="program-host">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <span class="lang-en">With Host Anjana Sharma</span>
+              <span class="lang-ne">प्रस्तोता अञ्जना शर्मा</span>
+            </span>
+          </p>
+          <p class="program-desc">
+            <span class="lang-en">Addressing local social issues, civic developments, municipality actions and speaking directly with community leaders.</span>
+            <span class="lang-ne">स्थानीय सामाजिक मुद्दा, नागरिक सरोकार, नगरपालिकाका कामहरू र समुदायका नेतृत्वकर्ताहरूसँग सीधा र जीवन्त संवाद।</span>
+          </p>
+          <div class="program-footer">
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>1.5 Hours</span>
+            </span>
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Nepali</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="program-card reveal">
+        <div class="program-img-wrap">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="Local Voice" class="program-img" referrerPolicy="no-referrer">
+          <span class="card-badge badge-upcoming">
+            <span class="lang-en">UPCOMING</span>
+            <span class="lang-ne">आउँदैछ</span>
+          </span>
+        </div>
+        <div class="program-details">
+          <div class="program-meta">
+            <span>06:00 PM - 07:00 PM</span>
+            <span>
+              <span class="lang-en">Everyday</span>
+              <span class="lang-ne">दैनिक</span>
+            </span>
+          </div>
+          <h3 class="program-name">
+            <span class="lang-en">My Soil, My Pride</span>
+            <span class="lang-ne">मेरो माटो, मेरो शान</span>
+          </h3>
+          <p class="program-host">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <span class="lang-en">With Ram Bahadur Chaudhary</span>
+              <span class="lang-ne">प्रस्तोता राम बहादुर चौधरी</span>
+            </span>
+          </p>
+          <p class="program-desc">
+            <span class="lang-en">Celebrating agricultural heritage, cultural diversity, folk music, and stories of local farmers and artisans from Nawalparasi.</span>
+            <span class="lang-ne">कृषि सम्पदा, सांस्कृतिक विविधता, लोक संगीत र नवलपरासीका स्थानीय किसान तथा उद्यमीहरूको संस्मरण र कथा।</span>
+          </p>
+          <div class="program-footer">
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>1 Hour</span>
+            </span>
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>NE / BH</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="program-card reveal">
+        <div class="program-img-wrap">
+          <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=600&auto=format&fit=crop" alt="Heartbeat Beats" class="program-img" referrerPolicy="no-referrer">
+          <span class="card-badge badge-upcoming">
+            <span class="lang-en">UPCOMING</span>
+            <span class="lang-ne">आउँदैछ</span>
+          </span>
+        </div>
+        <div class="program-details">
+          <div class="program-meta">
+            <span>08:00 PM - 10:00 PM</span>
+            <span>
+              <span class="lang-en">Everyday</span>
+              <span class="lang-ne">दैनिक</span>
+            </span>
+          </div>
+          <h3 class="program-name">
+            <span class="lang-en">Heartbeat Beats</span>
+            <span class="lang-ne">मनका कुरा</span>
+          </h3>
+          <p class="program-host">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <span class="lang-en">With Kiran Neupane</span>
+              <span class="lang-ne">प्रस्तोता किरण न्यौपाने</span>
+            </span>
+          </p>
+          <p class="program-desc">
+            <span class="lang-en">Your favorite dedications, love notes, heartfelt poetry, and late-night listener call-in requests. Speak your heart out.</span>
+            <span class="lang-ne">तपाईंका मनपर्ने समर्पणहरू, प्रेमका सन्देशहरू, सुमधुर कविताहरू र ढिलो रातिको प्रत्यक्ष टेलिफोन फर्माइसहरू। आफ्नो मनको कुरा पोख्नुहोस्।</span>
+          </p>
+          <div class="program-footer">
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>2 Hours</span>
+            </span>
+            <span class="program-footer-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Nepali</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROGRAM SCHEDULE SECTION -->
+  <section id="schedule" class="section-schedule">
+    <div class="section-title-wrap reveal">
+      <span class="section-subtitle">
+        <span class="lang-en">Broadcast Timetable</span>
+        <span class="lang-ne">समय तालिका</span>
+      </span>
+      <h2 class="section-title">
+        <span class="lang-en">Today's Smart Program Schedule</span>
+        <span class="lang-ne">आजको कार्यक्रम तालिका</span>
+      </h2>
+    </div>
+
+    <div class="schedule-container reveal" id="dynamic-schedule-list">
+      <!-- Program 1 (06:00 - 10:00) -->
+      <div class="schedule-row" data-start="6" data-end="10">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>06:00 AM - 10:00 AM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Morning Show (बिहानी किरण)</span>
+          <span class="lang-ne">बिहानी किरण</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">Suman Sapkota</span>
+          <span class="lang-ne">सुमन सापकोटा</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+
+      <!-- Program 2 (10:00 - 13:00) -->
+      <div class="schedule-row" data-start="10" data-end="13">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>10:00 AM - 01:00 PM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Music Time (सङ्गीत संसार)</span>
+          <span class="lang-ne">सङ्गीत संसार</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">DJ Rohit</span>
+          <span class="lang-ne">डीजे रोहित</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+
+      <!-- Program 3 (13:00 - 16:00) -->
+      <div class="schedule-row" data-start="13" data-end="16">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>01:00 PM - 04:00 PM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Community Talk (सुनवल आवाज)</span>
+          <span class="lang-ne">सुनवल आवाज</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">Anjana Sharma</span>
+          <span class="lang-ne">अञ्जना शर्मा</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+
+      <!-- Program 4 (16:00 - 19:00) -->
+      <div class="schedule-row" data-start="16" data-end="19">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>04:00 PM - 07:00 PM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Evening Show (मेरो माटो, मेरो शान)</span>
+          <span class="lang-ne">मेरो माटो, मेरो शान</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">Ram Bahadur Chaudhary</span>
+          <span class="lang-ne">राम बहादुर चौधरी</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+
+      <!-- Program 5 (19:00 - 22:00) -->
+      <div class="schedule-row" data-start="19" data-end="22">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>07:00 PM - 10:00 PM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Request Show (मनका कुरा)</span>
+          <span class="lang-ne">मनका कुरा</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">Kiran Neupane</span>
+          <span class="lang-ne">किरण न्यौपाने</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+
+      <!-- Program 6 (22:00 - 06:00) -->
+      <div class="schedule-row" data-start="22" data-end="6">
+        <div class="row-time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>10:00 PM - 06:00 AM</span>
+        </div>
+        <div class="row-program">
+          <span class="lang-en">Night Music (मधुर सङ्गीत)</span>
+          <span class="lang-ne">मधुर सङ्गीत</span>
+        </div>
+        <div class="row-host">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="lang-en">Auto Playlist</span>
+          <span class="lang-ne">स्वचालित सूची</span>
+        </div>
+        <div class="row-status">
+          <span class="status-badge" data-status-en="COMPLETED" data-status-ne="सकियो">COMPLETED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. ABOUT RADIO SECTION -->
+  <section id="about" class="section-about">
+    <div class="section-title-wrap reveal">
+      <span class="section-subtitle">
+        <span class="lang-en">ABOUT THE STATION</span>
+        <span class="lang-ne">रेडियो सुनवलको बारेमा</span>
+      </span>
+      <h2 class="section-title">
+        <span class="lang-en">Voice of the Community</span>
+        <span class="lang-ne">समुदायको आवाज</span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- Card 1 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Community Radio</span>
+          <span class="lang-ne">सामुदायिक रेडियो</span>
+        </h3>
+        <p>
+          <span class="lang-en">A non-profit community radio managed and run entirely by the local citizens of Sunwal, Nawalparasi. We prioritize public interest, local voices, and positive social reform.</span>
+          <span class="lang-ne">नवलपरासीको सुनवलका स्थानीय नागरिकहरूद्वारा व्यवस्थापन र सञ्चालन गरिएको एक गैर-नाफामूलक सामुदायिक रेडियो। हामी जनहित, स्थानीय आवाज र सकारात्मक सामाजिक सुधारलाई प्राथमिकता दिन्छौं।</span>
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Our Mission</span>
+          <span class="lang-ne">हाम्रो उद्देश्य</span>
+        </h3>
+        <p>
+          <span class="lang-en">To empower the local populace by providing unbiased information, high-quality educational programs, cultural preservation broadcasts, and platforming diverse voices.</span>
+          <span class="lang-ne">निष्पक्ष सूचना, उच्च गुणस्तरीय शैक्षिक कार्यक्रम, सांस्कृतिक प्रवर्द्धन र बहुआयामिक आवाजहरूलाई स्थान दिएर स्थानीय जनमानसलाई सशक्त र सुसूचित बनाउनु हाम्रो मुख्य उद्देश्य हो।</span>
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Our Vision</span>
+          <span class="lang-ne">हाम्रो दृष्टिकोण</span>
+        </h3>
+        <p>
+          <span class="lang-en">To establish an inclusive, well-informed, and highly collaborative community where digital broadcasting serves as a strong bridge for rural development and civic engagement.</span>
+          <span class="lang-ne">एक समावेशी, सुसूचित र उच्च रूपमा सहयोगी समुदायको स्थापना गर्ने जहाँ रेडियो डिजिटल प्रसारणले ग्रामीण विकास र नागरिक सहभागिताको लागि बलियो पुलको रूपमा काम गर्दछ।</span>
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Broadcast Coverage</span>
+          <span class="lang-ne">प्रसारण क्षेत्र</span>
+        </h3>
+        <p>
+          <span class="lang-en">With a powerful 500-watt transmitter, we cover Nawalparasi, Rupandehi, Kapilvastu, Palpa, and neighboring districts, reaching over 500,000 active listeners over-the-air.</span>
+          <span class="lang-ne">५००-वाटको शक्तिशाली ट्रान्समिटरको माध्यमबाट हामी नवलपरासी, रूपन्देही, कपिलवस्तु, पाल्पा र छिमेकी जिल्लाहरूका ५,००,००० भन्दा बढी श्रोताहरूमाझ सुनिन्छौं।</span>
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Our History</span>
+          <span class="lang-ne">हाम्रो इतिहास</span>
+        </h3>
+        <p>
+          <span class="lang-en">Founded in 2012 by local social activists, journalists, and educators to address the severe communication gap in Nawalparasi and empower marginalized communities.</span>
+          <span class="lang-ne">ग्रामीण क्षेत्रमा सञ्चारको पहुँच पुर्‍याउन र सीमान्तकृत समुदायलाई सशक्त बनाउन स्थानीय सामाजिक अभियन्ता, पत्रकार र शिक्षाविद्हरूद्वारा सन् २०१२ मा स्थापना गरिएको।</span>
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Achievements</span>
+          <span class="lang-ne">हाम्रा उपलब्धिहरू</span>
+        </h3>
+        <p>
+          <span class="lang-en">Honored repeatedly as the Best Community Radio in Lumbini Province for exceptional public service, disaster response support, and promoting local folklore.</span>
+          <span class="lang-ne">उत्कृष्ट सामुदायिक सेवा, विपद् व्यवस्थापनमा पुर्‍याएको योगदान र स्थानीय लोक कलाको प्रवर्द्धनका लागि लुम्बिनी प्रदेशको उत्कृष्ट सामुदायिक रेडियोको रूपमा सम्मानित।</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. STATISTICS SECTION -->
+  <section class="section-stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="14" data-suffix="+">0</span>
+        <span class="stat-title">
+          <span class="lang-en">Years of Community Service</span>
+          <span class="lang-ne">सामुदायिक सेवाका वर्षहरू</span>
+        </span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="500" data-suffix="K+">0</span>
+        <span class="stat-title">
+          <span class="lang-en">Active Listeners</span>
+          <span class="lang-ne">सक्रिय श्रोताहरू</span>
+        </span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="32" data-suffix="+">0</span>
+        <span class="stat-title">
+          <span class="lang-en">Weekly Programs Hosted</span>
+          <span class="lang-ne">साप्ताहिक कार्यक्रमहरू</span>
+        </span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="120" data-suffix="+">0</span>
+        <span class="stat-title">
+          <span class="lang-en">Community Events Supported</span>
+          <span class="lang-ne">सहयोग गरिएका सामाजिक कार्यक्रम</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 12. OUR TEAM SECTION -->
+  <section id="team" class="section-team">
+    <div class="section-title-wrap reveal">
+      <span class="section-subtitle">
+        <span class="lang-en">THE VOICES</span>
+        <span class="lang-ne">हाम्रो टोली</span>
+      </span>
+      <h2 class="section-title">
+        <span class="lang-en">Meet Our Dedicated Team</span>
+        <span class="lang-ne">रेडियो पछाडिका समर्पित व्यक्तिहरु</span>
+      </h2>
+    </div>
+
+    <div class="team-grid">
+      <!-- Member 1 -->
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="img/dipak.jpg" alt="Ram Prasad Pokharel" class="team-img" referrerPolicy="no-referrer">
+          <div class="team-socials">
+            <a href="https://www.facebook.com/dipak.khanal.92" class="team-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Dipak Khanal</h3>
+          <p class="team-role">
+            <span class="lang-en">Station Manager</span>
+            <span class="lang-ne">स्टेशन म्यानेजर</span>
+          </p>
+          <span class="team-dept">
+            <span class="lang-en">Administration</span>
+            <span class="lang-ne">प्रशासन</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="img/prabhu.jpg" alt="Kabita Sen" class="team-img" referrerPolicy="no-referrer">
+          <div class="team-socials">
+            <a href="https://www.facebook.com/parbhu.0723" class="team-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="https://www.instagram.com/parbhu.0723" class="team-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Prabhu Mahat Chhetry</h3>
+          <p class="team-role">
+            <span class="lang-en">Senior RJ / Marketing Manager</span>
+            <span class="lang-ne">वरिष्ठ आर.जे. / बजार प्रबन्धक</span>
+          </p>
+          <span class="team-dept">
+            <span class="lang-en">Technical & Marketing Department</span>
+            <span class="lang-ne">प्राविधिक र बिज्ञापन शाखा</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="img/kriyal.jpg" alt="Dinesh Chaudhary" class="team-img" referrerPolicy="no-referrer">
+          <div class="team-socials">
+            <a href="https://www.facebook.com/kriyalghimire" class="team-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="https://www.instagram.com/kriyalghimire" class="team-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Kriyal Ghimire</h3>
+          <p class="team-role">
+            <span class="lang-en">News Editor</span>
+            <span class="lang-ne">समाचार सम्पादक</span>
+          </p>
+          <span class="team-dept">
+            <span class="lang-en">News & Current Affairs</span>
+            <span class="lang-ne">समाचार तथा समसामयिकी</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="img/aaditya.png" alt="Sabnam Ansari" class="team-img" referrerPolicy="no-referrer">
+          <div class="team-socials">
+            <a href="https://www.facebook.com/profile.php?id=100076938756945" class="team-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Aaditya Bhandari</h3>
+          <p class="team-role">
+            <span class="lang-en">Technician</span>
+            <span class="lang-ne">प्राबिधिक</span>
+          </p>
+          <span class="team-dept">
+            <span class="lang-en">IT & Broadcasting</span>
+            <span class="lang-ne">सूचना प्रविधि तथा प्रसारण</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="img/aakriti.jpg" alt="Sabnam Ansari" class="team-img" referrerPolicy="no-referrer">
+          <div class="team-socials">
+            <a href="https://www.facebook.com/aakrityy.timilsina" class="team-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Aakriti Timilsina</h3>
+          <p class="team-role">
+            <span class="lang-en">Technician</span>
+            <span class="lang-ne">प्राबिधिक</span>
+          </p>
+          <span class="team-dept">
+            <span class="lang-en">IT & Broadcasting</span>
+            <span class="lang-ne">सूचना प्रविधि तथा प्रसारण</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. CONTACT SECTION -->
+  <section id="contact" class="section-contact">
+    <div class="contact-container">
+      
+      <!-- Info Panel -->
+      <div class="contact-info-panel reveal">
+        <span class="section-subtitle">
+          <span class="lang-en">GET IN TOUCH</span>
+          <span class="lang-ne">सम्पर्क गर्नुहोस्</span>
+        </span>
+        <h2 class="contact-info-title">
+          <span class="lang-en">Connect With Our Station</span>
+          <span class="lang-ne">हामी तपाईंबाट सुन्न चाहन्छौं</span>
+        </h2>
+        <p class="contact-info-desc">
+          <span class="lang-en">Have a query, song dedication, or advertisement request? Feel free to reach out to us via any channel below. Our team is responsive and here for you!</span>
+          <span class="lang-ne">के तपाईंको कुनै जिज्ञासा, गीत समर्पण वा विज्ञापनको अनुरोध छ? हामीलाई तलका कुनै पनि माध्यमबाट सम्पर्क गर्न सक्नुहुन्छ। हाम्रो टोली तपाईंको मद्दतको लागि सदैव तत्पर छ।</span>
+        </p>
+
+        <div class="contact-channels">
+          <!-- Item 1 -->
+          <div class="channel-item">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="channel-details">
+              <h4>
+                <span class="lang-en">Our Location</span>
+                <span class="lang-ne">हाम्रो ठेगाना</span>
+              </h4>
+              <p>
+                <span class="lang-en">Sunwal Municipality-01, Nawalparasi, Lumbini Province, Nepal</span>
+                <span class="lang-ne">सुनवल नगरपालिका-०१, नवलपरासी, लुम्बिनी प्रदेश, नेपाल</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="channel-item">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="channel-details">
+              <h4>
+                <span class="lang-en">Phone Lines</span>
+                <span class="lang-ne">फोन नम्बरहरू</span>
+              </h4>
+              <p>
+                <a href="tel:078-570123">+977-78-570113</a>, 
+                <a href="tel:9866154674"> 9866154674</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="channel-item">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="channel-details">
+              <h4>
+                <span class="lang-en">Email Queries</span>
+                <span class="lang-ne">इमेल ठेगाना</span>
+              </h4>
+              <p>
+                <a href="mailto:newsradiosunwal@gmail.com">newsradiosunwal@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Panel -->
+      <div class="contact-form-panel reveal">
+        <h3 class="form-title">
+          <span class="lang-en">Send Us a Message</span>
+          <span class="lang-ne">हामीलाई सन्देश पठाउनुहोस्</span>
+        </h3>
+        <form id="contact-form" autocomplete="off">
+          <div class="form-group">
+            <label for="form-name">
+              <span class="lang-en">Full Name</span>
+              <span class="lang-ne">पूरा नाम</span>
+            </label>
+            <input type="text" id="form-name" class="form-control" placeholder="Ram Pd Bhandari" required>
+          </div>
+          <div class="form-group">
+            <label for="form-email">
+              <span class="lang-en">Email Address</span>
+              <span class="lang-ne">इमेल ठेगाना</span>
+            </label>
+            <input type="email" id="form-email" class="form-control" placeholder="rampdbhandari@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="form-message">
+              <span class="lang-en">Your Message</span>
+              <span class="lang-ne">तपाईंको सन्देश</span>
+            </label>
+            <textarea id="form-message" class="form-control" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <span>
+              <span class="lang-en">Send Message</span>
+              <span class="lang-ne">सन्देश पठाउनुहोस्</span>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. DOCKSTICKY BOTTOM STICKY PLAYER (Spotify Style) -->
+  <div id="sticky-player">
+    <div class="sticky-player-container">
+      <div class="sticky-station">
+        <img src="img/rikon.png" alt="Sunwal Cover" class="sticky-art" referrerPolicy="no-referrer">
+        <div class="sticky-meta">
+          <h4>Radio Sunwal 90.7</h4>
+          <p class="sticky-status-wrap">
+            <span class="live-dot" style="width: 8px; height: 8px;"></span>
+            <span class="lang-en" id="sticky-status-label-en">Connected Live</span>
+            <span class="lang-ne" id="sticky-status-label-ne">सम्पर्क भयो</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="sticky-controls">
+        <button class="btn-sticky-play" aria-label="Toggle Play">
+          <svg viewBox="0 0 24 24" class="icon-play">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg viewBox="0 0 24 24" class="icon-pause">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+        <div class="sticky-eq">
+          <div class="sticky-eq-bar"></div>
+          <div class="sticky-eq-bar"></div>
+          <div class="sticky-eq-bar"></div>
+          <div class="sticky-eq-bar"></div>
+        </div>
+      </div>
+
+      <div class="sticky-actions">
+        <div class="sticky-volume">
+          <button class="btn-mute" aria-label="Toggle Mute">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vol-icon" style="width: 16px; height: 16px;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mute-icon" style="display: none; width: 16px; height: 16px;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+          </button>
+          <div class="volume-slider-wrap">
+            <div class="volume-progress" style="width: 80%;"></div>
+            <input type="range" min="0" max="1" step="0.05" value="0.8" class="volume-slider" aria-label="Adjust Volume">
+          </div>
+          <span class="vol-percentage" id="vol-percentage-sticky">80%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. TOAST NOTIFICATION -->
+  <div id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <div id="toast-text">
+      <span class="lang-en" id="toast-text-en">Your message has been sent successfully!</span>
+      <span class="lang-ne" id="toast-text-ne">तपाईंको सन्देश सफलतापूर्वक पठाइयो!</span>
+    </div>
+  </div>
+
+  <!-- 17. BACK TO TOP BUTTON -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- 18. PREMIUM FOOTER -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Footer Brand Info -->
+      <div class="footer-info">
+        <h3>RADIO <span>SUNWAL</span></h3>
+        <p class="footer-desc lang-en">
+          Radio Sunwal 90.7 MHz is a premier non-profit community radio station based in Sunwal, Nawalparasi. Serving our listeners since 2012 with impartial news, social dialogues, educational programs, and delightful music.
+        </p>
+        <p class="footer-desc lang-ne">
+          रेडियो सुनवल ९०.७ मेगाहर्ज सुनवल, नवलपरासीको एक अग्रणी गैर-नाफामूलक सामुदायिक रेडियो हो। निष्पक्ष समाचार, सामाजिक संवाद, शैक्षिक चेतना र उत्कृष्ट संगीतका साथ सन् २०१२ देखि हामी श्रोताको सेवामा समर्पित छौं।
+        </p>
+        <div class="footer-socials">
+          <a href="https://fb.com/radiosunwal" class="footer-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://youtube.com/radiosunwal" class="footer-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+          <a href="https://instagram.com/radiosunwal" class="footer-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h4>
+          <span class="lang-en">Quick Links</span>
+          <span class="lang-ne">महत्वपूर्ण लिङ्कहरू</span>
+        </h4>
+        <ul class="footer-links">
+          <li><a href="#home"><span class="lang-en">Home</span><span class="lang-ne">गृहपृष्ठ</span></a></li>
+          <li><a href="#listen"><span class="lang-en">Listen Live</span><span class="lang-ne">प्रत्यक्ष प्रसारण</span></a></li>
+          <li><a href="#programs"><span class="lang-en">Featured Shows</span><span class="lang-ne">लोकप्रिय कार्यक्रम</span></a></li>
+          <li><a href="#schedule"><span class="lang-en">Broadcasting Timetable</span><span class="lang-ne">समय तालिका</span></a></li>
+          <li><a href="#about"><span class="lang-en">Our Identity</span><span class="lang-ne">हाम्रो परिचय</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Programs Column -->
+      <div class="footer-column">
+        <h4>
+          <span class="lang-en">Popular Shows</span>
+          <span class="lang-ne">लोकप्रिय कार्यक्रम</span>
+        </h4>
+        <ul class="footer-links">
+          <li><a href="#programs"><span class="lang-en">Morning Show</span><span class="lang-ne">बिहानी किरण</span></a></li>
+          <li><a href="#programs"><span class="lang-en">Music Time</span><span class="lang-ne">सङ्गीत संसार</span></a></li>
+          <li><a href="#programs"><span class="lang-en">Community Talk</span><span class="lang-ne">सुनवल आवाज</span></a></li>
+          <li><a href="#programs"><span class="lang-en">Evening Show</span><span class="lang-ne">मेरो माटो, मेरो शान</span></a></li>
+          <li><a href="#programs"><span class="lang-en">Request Show</span><span class="lang-ne">मनका कुरा</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div class="footer-column">
+        <h4>
+          <span class="lang-en">Contact Info</span>
+          <span class="lang-ne">सम्पर्क विवरण</span>
+        </h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Sunwal-04, Nawalparasi, Nepal</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+977-78-570123</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@radiosunwal.com.np</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        &copy; 2026 Radio Sunwal 90.7 FM. All Rights Reserved.
+      </div>
+      <div class="footer-credit">
+        <span class="lang-en">Website Developed By:</span>
+        <span class="lang-ne">वेबसाइट निर्माण:</span>
+        <a href="https://parbhumahatchhetry.com.np" target="_blank" rel="noopener">Parbhu Mahat Chhetry</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script File -->
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

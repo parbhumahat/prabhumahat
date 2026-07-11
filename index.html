@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prabhu Mahat Chhetry - Professional Full Stack Developer, UI/UX Designer, Technology Consultant & Creative Professional. Discover bespoke, high-performance web applications and digital solutions.">
+  <meta name="keywords" content="Prabhu Mahat Chhetry, Full Stack Developer, UI/UX Designer, Technology Consultant, Creative Professional, Web Developer, Radio Sunwal, Leo Club, Portfolio, Responsive Web Design, AdSense Ready, Vanilla JS">
+  <meta name="author" content="Prabhu Mahat Chhetry">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prabhu Mahat Chhetry | Full Stack Developer & Digital Solution Creator">
+  <meta property="og:description" content="Explore high-performance custom web applications, elegant UI/UX, and tailored technical consulting by Prabhu Mahat Chhetry.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:url" content="https://ais-pre-vpcoa37tivss5ig4dx3jse-1032839209862.asia-southeast1.run.app">
+
+  <title>Prabhu Mahat Chhetry | Full Stack Developer & Digital Solution Creator</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon with high contrast tech brand marker -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Premium Header & Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo" aria-label="Prabhu Mahat Chhetry Brand Logo">
+        <span class="logo-accent">&lt;</span>prabhu<span class="logo-text">.dev</span><span class="logo-accent">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation menu -->
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#clients" class="nav-link">Clients</a></li>
+          <li><a href="#timeline" class="nav-link">Journey</a></li>
+          <li><a href="#blog" class="nav-link">Articles</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action items -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light visual scheme">
+          <!-- Moon Icon (Dark Mode active state indicator) -->
+          <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+          <!-- Sun Icon (Light Mode active state indicator) -->
+          <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        </button>
+        
+        <a href="#contact" class="btn btn-primary header-cta">Hire Me</a>
+
+        <!-- Hamburger Icon for mobile screens -->
+        <button id="menu-toggle" class="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-line line-top"></span>
+          <span class="hamburger-line line-mid"></span>
+          <span class="hamburger-line line-bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-drawer">
+      <div class="mobile-drawer-header">
+        <span class="logo">&lt;prabhu.dev/&gt;</span>
+        <button id="menu-close" class="close-btn" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <nav class="mobile-drawer-nav">
+        <ul>
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About Me</a></li>
+          <li><a href="#services" class="mobile-nav-link">My Services</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Featured Work</a></li>
+          <li><a href="#clients" class="mobile-nav-link">Clients Served</a></li>
+          <li><a href="#timeline" class="mobile-nav-link">Professional Journey</a></li>
+          <li><a href="#blog" class="mobile-nav-link">Useful Articles</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Get in Touch</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <p>&copy; 2026 Prabhu Mahat Chhetry</p>
+        <p class="drawer-status">● Ready for New Projects</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Section 1: Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-accent-1"></div>
+      <div class="hero-bg-accent-2"></div>
+      <div class="container hero-container">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <div class="hero-badge-container">
+              <span class="badge-dot"></span>
+              <span class="hero-badge">Full Stack Developer &amp; Technology Consultant</span>
+            </div>
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Prabhu Mahat Chhetry</span>, creator of high-performance digital solutions.
+            </h1>
+            <p class="hero-subtitle">
+              I specialize in engineering responsive, secure, and AdSense-compliant web applications. By pairing advanced backend system architecture with bespoke UI/UX layouts, I help businesses, community organizations, and personal brands build an authoritative digital presence that delivers measurable results.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+              <a href="#contact" class="btn btn-outline btn-lg">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-dashboard-preview">
+            <div class="dashboard-mock">
+              <div class="dashboard-header">
+                <div class="dashboard-dots">
+                  <span class="dash-dot red"></span>
+                  <span class="dash-dot yellow"></span>
+                  <span class="dash-dot green"></span>
+                </div>
+                <div class="dashboard-tab">prabhu_system_metrics.sh</div>
+              </div>
+              <div class="dashboard-body font-mono">
+                <div class="terminal-line"><span class="terminal-prompt">$</span> npm run start:portfolio</div>
+                <div class="terminal-line success-text">&gt; prabhu-portfolio@3.0.0 start</div>
+                <div class="terminal-line success-text">&gt; initializing secure vanilla engine...</div>
+                
+                <div class="dashboard-stats-grid">
+                  <div class="dash-stat-box">
+                    <span class="stat-label">SYSTEM UPTIME</span>
+                    <span class="stat-value text-emerald">100.00%</span>
+                  </div>
+                  <div class="dash-stat-box">
+                    <span class="stat-label">RESPONSE SPEED</span>
+                    <span class="stat-value text-indigo">42ms</span>
+                  </div>
+                  <div class="dash-stat-box">
+                    <span class="stat-label">CORE SECURITY</span>
+                    <span class="stat-value text-emerald">SSL/TLS</span>
+                  </div>
+                </div>
+
+                <div class="terminal-code-block">
+                  <span class="code-comment">// Active stack properties</span>
+                  <span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+                    name: <span class="code-string">"Prabhu Mahat Chhetry"</span>,
+                    roles: [<span class="code-string">"Developer"</span>, <span class="code-string">"Designer"</span>, <span class="code-string">"Consultant"</span>],
+                    rules: [<span class="code-string">"Clean Code"</span>, <span class="code-string">"Pure JS"</span>, <span class="code-string">"High SEO"</span>],
+                    responsive: <span class="code-literal">true</span>,
+                    adsenseReady: <span class="code-literal">true</span>
+                  };
+                </div>
+                
+                <div class="terminal-status-bar">
+                  <span>[Active Branch: main]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements / Statistics Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" id="stat-projects">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <div class="stat-text-wrapper">
+              <h3 class="stat-number font-mono" data-target="50">50+</h3>
+              <p class="stat-label">Projects Completed</p>
+            </div>
+          </div>
+          
+          <div class="stat-card" id="stat-clients">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="stat-text-wrapper">
+              <h3 class="stat-number font-mono" data-target="20">20+</h3>
+              <p class="stat-label">Clients Served</p>
+            </div>
+          </div>
+          
+          <div class="stat-card" id="stat-orgs">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><path d="M7 21V11a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v10"></path></svg>
+            </div>
+            <div class="stat-text-wrapper">
+              <h3 class="stat-number font-mono" data-target="5">5+</h3>
+              <p class="stat-label">Organizations Supported</p>
+            </div>
+          </div>
+          
+          <div class="stat-card" id="stat-responsive">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <div class="stat-text-wrapper">
+              <h3 class="stat-number font-mono" data-target="100">100%</h3>
+              <p class="stat-label">Responsive Solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: About Me Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Get to Know Me</span>
+          <h2 class="section-title">About Prabhu Mahat Chhetry</h2>
+          <div class="title-bar"></div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-nav-card">
+            <h3 class="about-sidebar-title">Explore My Credentials</h3>
+            <ul class="about-tab-list" role="tablist">
+              <li>
+                <button class="about-tab-btn active" role="tab" aria-selected="true" data-tab="journey">
+                  <span class="tab-icon"></span> My Developer Journey
+                </button>
+              </li>
+              <li>
+                <button class="about-tab-btn" role="tab" aria-selected="false" data-tab="philosophy">
+                  <span class="tab-icon"></span> Engineering Standards
+                </button>
+              </li>
+              <li>
+                <button class="about-tab-btn" role="tab" aria-selected="false" data-tab="approach">
+                  <span class="tab-icon"></span> Problem-Solving Mindset
+                </button>
+              </li>
+              <li>
+                <button class="about-tab-btn" role="tab" aria-selected="false" data-tab="goals">
+                  <span class="tab-icon"></span> Future Goals &amp; Philosophy
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="about-content-card">
+            <!-- Tab Contents -->
+            <div class="about-tab-panel active" id="tab-journey">
+              <h3>My Professional Development Journey</h3>
+              <p class="about-paragraph">
+                My passion for web technology started from a simple curiosity: how can a clean series of text instructions translate into a highly accessible global interface? This drive led me to master the entire stack from the pixel up. I dedicated my early years to learning the strict visual and layout standards of CSS3, SVG manipulation, and core DOM scripting before scaling my expertise to server environments and relational database schemas.
+              </p>
+              <p class="about-paragraph">
+                Today, with an extensive portfolio of successful client solutions, I serve as a versatile full-stack engineer and digital solution architect. I design lightweight, highly optimized web systems that serve thousands of users. My background allows me to understand both the technical parameters of server latency and the human constraints of intuitive user experience.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Years of full-stack engineering expertise</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Active tech lead for non-profit and community portals</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Specialized in high-speed, light-bundle delivery</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-tab-panel" id="tab-philosophy">
+              <h3>Strict Engineering and Codebase Standards</h3>
+              <p class="about-paragraph">
+                True engineering is about restraint. In a digital environment cluttered with bloated packages and heavy frontend frameworks, I advocate for writing clean, optimized, semantic code. I believe that every unnecessary line of javascript represents a barrier to accessibility, slower paint speeds on cellular networks, and reduced engagement metrics.
+              </p>
+              <p class="about-paragraph">
+                By designing purely with semantic HTML5 markup, responsive native layouts, and modular vanilla script patterns, I secure near-instant page loads. My code compiles safely, ranks exceptionally high in organic SEO audits, and features clean structures that Google AdSense crawls and approves instantly.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Zero unnecessary dependency footprint</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Strict adherence to WCAG 2.1 AA contrast requirements</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>100% Mobile-first responsive fluid grids</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-tab-panel" id="tab-approach">
+              <h3>A Analytical &amp; Solution-Oriented Approach</h3>
+              <p class="about-paragraph">
+                For me, writing code is only 20% of the developer journey. The remaining 80% is understanding client constraints, identifying architectural bottlenecks, and formulating systematic solutions. I do not simply write algorithms; I diagnose business processes and automate legacy operations to unlock real growth.
+              </p>
+              <p class="about-paragraph">
+                Whether integrating live real-time media streams for local radio agencies like Radio Sunwal, or structuring secure administrative portals for international community networks like the Leo Club, I treat every project with scientific thoroughness. I structure schemas to handle growth smoothly, validate forms in real time to secure entries, and implement robust spam barriers.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Systematic relational database schema design</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Detailed user path plotting and layout wireframing</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Advanced safety captures and data protection layers</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-tab-panel" id="tab-goals">
+              <h3>My Professional Goals &amp; Client Objectives</h3>
+              <p class="about-paragraph">
+                My overarching professional objective is to bridge the gap between creative visual artistry and complex backend data pipelines. I aim to continue providing high-end technical consulting and bespoke programming to small businesses, local corporations, and non-profit organizations that are looking to establish a secure and profitable web presence.
+              </p>
+              <p class="about-paragraph">
+                I measure my own success by the metrics I unlock for my clients: lower visitor bounce rates, higher search engine positioning, seamless registration lists, and increased ad revenue. My goal is to ensure that your digital solution remains secure, easy to maintain, and mathematically optimized for years to come.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Empowering regional community organizations digitally</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Unlocking ad monetization paths via clear structural code</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">✓</span>
+                  <span>Fostering robust, secure, and future-proof architectures</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Services Section -->
+    <section id="services" class="services-section section-padding bg-alt">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">How I Create Value</span>
+          <h2 class="section-title">Professional Digital Services</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="service-title">Web Development</h3>
+            </div>
+            <p class="service-desc">
+              I code custom corporate portals, high-speed agency websites, and bespoke web applications. Every site is engineered from scratch for optimal performance, mobile layout stability, and strict SEO indexing.
+            </p>
+            <ul class="service-features">
+              <li><span>✔</span> Business &amp; SaaS Platforms</li>
+              <li><span>✔</span> Complete Portfolio Websites</li>
+              <li><span>✔</span> Responsive Web Applications</li>
+            </ul>
+            <button class="service-action-btn" data-service="Web Development">Inquire About Web Dev</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 class="service-title">UI/UX Design</h3>
+            </div>
+            <p class="service-desc">
+              I map out clear customer interaction maps and high-fidelity wireframes that reinforce trust. By implementing WCAG accessibility guidelines, I design experiences that convert visitors into active leads.
+            </p>
+            <ul class="service-features">
+              <li><span>✔</span> High-fidelity UI wireframes</li>
+              <li><span>✔</span> User experience optimizations</li>
+              <li><span>✔</span> Design systems &amp; components</li>
+            </ul>
+            <button class="service-action-btn" data-service="UI/UX Design">Inquire About Design</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2z"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="service-title">Digital Solutions</h3>
+            </div>
+            <p class="service-desc">
+              I build custom systems to automate manual tasks and streamline operations. This includes building database schedulers, tracking portals, and integrating secure media streaming for organizations.
+            </p>
+            <ul class="service-features">
+              <li><span>✔</span> System automation workflows</li>
+              <li><span>✔</span> Media streaming integrations</li>
+              <li><span>✔</span> Community manager portals</li>
+            </ul>
+            <button class="service-action-btn" data-service="Digital Solutions">Inquire About Solutions</button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <h3 class="service-title">Technical Consulting</h3>
+            </div>
+            <p class="service-desc">
+              I provide clear, professional architectural advice regarding hosting services, schema security, and SEO ranking structures to ensure you spend your digital budget strategically.
+            </p>
+            <ul class="service-features">
+              <li><span>✔</span> Website planning blueprints</li>
+              <li><span>✔</span> Hosting &amp; Database strategy</li>
+              <li><span>✔</span> SEO &amp; Performance audits</li>
+            </ul>
+            <button class="service-action-btn" data-service="Technical Consulting">Inquire About Consulting</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Projects / Work Portfolio -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Craftsmanship Showcase</span>
+          <h2 class="section-title">Projects &amp; Work Portfolio</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="portfolio-filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX Layout</button>
+          <button class="filter-btn" data-filter="consulting">Consulting</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Radio Sunwal -->
+          <div class="project-card" data-category="web">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-cat">Web Development</span>
+                <span class="project-client font-mono">Radio Sunwal</span>
+              </div>
+              <h3 class="project-name">Radio Sunwal Website</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-intro-text">
+                Designed and developed a highly optimized responsive website for regional broadcast, featuring live server audio streaming, program schedule lists, and dynamic digital news boards.
+              </p>
+              
+              <!-- Accordion Trigger Button -->
+              <button class="project-expand-btn" aria-expanded="false">
+                <span class="btn-text">Read Technical Specifications</span>
+                <span class="btn-icon">▼</span>
+              </button>
+
+              <!-- Collapsible Tech Details -->
+              <div class="project-details-expanded" aria-hidden="true">
+                <div class="expanded-inner">
+                  <div class="detail-row">
+                    <strong>My Role:</strong> <span>Lead Web Developer</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>The Challenge:</strong> <span>Legacy site was slow, not mobile responsive, and would frequently crash during peak hours when users loaded live streaming feeds.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Solutions Built:</strong> <span>Restructured audio feed buffering to run asynchronously, avoiding UI render locks. Built custom CSS grids for seamless tablet and mobile navigation.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Outcome:</strong> <span>Achieved 100% stable live streaming, increased active mobile listeners by 60%, and reduced bandwidth overhead costs by 25%.</span>
+                  </div>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">Vanilla JS</span>
+                    <span class="tech-badge">Audio Streaming</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="/radiosunwal/" class="btn btn-outline btn-sm font-mono text-uppercase">Inquire About This Project</a>
+            </div>
+          </div>
+
+          <!-- Project 2: Leo Club Portal -->
+          <div class="project-card" data-category="web">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-cat">Web Applications</span>
+                <span class="project-client font-mono">Leo Club Projects</span>
+              </div>
+              <h3 class="project-name">Coffee Shop Website</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-intro-text">
+               A premium responsive interface for an artisanal cafe featuring local ordering, reservation tracking, and customizable visual templates.
+              </p>
+              
+              <button class="project-expand-btn" aria-expanded="false">
+                <span class="btn-text">Read Technical Specifications</span>
+                <span class="btn-icon">▼</span>
+              </button>
+
+              <div class="project-details-expanded" aria-hidden="true">
+                <div class="expanded-inner">
+                  <div class="detail-row">
+                    <strong>My Role:</strong> <span>Full Stack Developer &amp; Consultant</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>The Challenge:</strong> <span>Managing regional records across multiple spreadsheets, leading to errors in scheduling and high administrative latency.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Solutions Built:</strong> <span>Coded a secure administration platform with client-side filters, searchable lists, event registration forms, and clean mobile-friendly spreadsheets.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Outcome:</strong> <span>Reduced administrative manual labor hours by 40%, streamlined registration, and increased member participation in events by 45%.</span>
+                  </div>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3 Grid</span>
+                    <span class="tech-badge">ES6+ JS</span>
+                    <span class="tech-badge">Data Tables</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://koffeehub.com.np" class="btn btn-outline btn-sm font-mono text-uppercase">Inquire About This Project</a>
+            </div>
+          </div>
+
+          <!-- Project 3: Apex Enterprise -->
+          <div class="project-card" data-category="uiux">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-cat">UI/UX Design</span>
+                <span class="project-client font-mono">Zenith Local Businesses</span>
+              </div>
+              <h3 class="project-name">SaaS Product Branding &amp; Storefront</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-intro-text">
+                A modern client-facing e-commerce storefront layout, styled for regional physical businesses transition into digital sales, prioritizing local search indexing and fast cart setups.
+              </p>
+              
+              <button class="project-expand-btn" aria-expanded="false">
+                <span class="btn-text">Read Technical Specifications</span>
+                <span class="btn-icon">▼</span>
+              </button>
+
+              <div class="project-details-expanded" aria-hidden="true">
+                <div class="expanded-inner">
+                  <div class="detail-row">
+                    <strong>My Role:</strong> <span>Lead UI/UX Designer &amp; Developer</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>The Challenge:</strong> <span>Physical stores had high cart bounce rates on mobile due to tiny touch targets, bloated animations, and poor alignment.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Solutions Built:</strong> <span>Redesigned checkout paths using high-contrast typography, large tactile inputs, minimal styling, and zero render-blocking dependencies.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Outcome:</strong> <span>Increased mobile conversions by 30%, minimized customer friction, and established full offline-friendly product filtering.</span>
+                  </div>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Figma Draft</span>
+                    <span class="tech-badge">Mobile Fluidity</span>
+                    <span class="tech-badge">Vanilla JS</span>
+                    <span class="tech-badge">CSS Animations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="btn btn-outline btn-sm font-mono text-uppercase">Inquire About This Project</a>
+            </div>
+          </div>
+
+          <!-- Project 4: Dr Shrestha Clinic -->
+          <div class="project-card" data-category="consulting">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-cat">Technical Consulting</span>
+                <span class="project-client font-mono">Dr. Shrestha Clinic</span>
+              </div>
+              <h3 class="project-name">Digital Presence &amp; Booking Architecture</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-intro-text">
+                Architectural guidance, speed audits, and security blueprints for a medical clinic portal, enabling secure dynamic patient booking requests and immediate local SEO indexing.
+              </p>
+              
+              <button class="project-expand-btn" aria-expanded="false">
+                <span class="btn-text">Read Technical Specifications</span>
+                <span class="btn-icon">▼</span>
+              </button>
+
+              <div class="project-details-expanded" aria-hidden="true">
+                <div class="expanded-inner">
+                  <div class="detail-row">
+                    <strong>My Role:</strong> <span>Technology Consultant &amp; Auditor</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>The Challenge:</strong> <span>Existing CMS-based site was extremely slow (Lighthouse score 32/100), leaking data schemas, and failing compliance parameters.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Solutions Built:</strong> <span>Advised migration to secure flat static assets. Designed clean data forms with server security disclaimers and structured local SEO maps.</span>
+                  </div>
+                  <div class="detail-row">
+                    <strong>Outcome:</strong> <span>Achieved a perfect 100/100 Lighthouse speed score, eliminated schema leaks, and increased medical booking submissions by 50%.</span>
+                  </div>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Speed Audit</span>
+                    <span class="tech-badge">Local SEO</span>
+                    <span class="tech-badge">Static Assets</span>
+                    <span class="tech-badge">Security Audit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="btn btn-outline btn-sm font-mono text-uppercase">Inquire About This Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Clients / Organizations Served Section -->
+    <section id="clients" class="clients-section section-padding bg-alt">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Proven Collaboration</span>
+          <h2 class="section-title">Organizations &amp; Clients I Have Served</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="clients-grid">
+          <!-- Client 1 -->
+          <div class="client-card">
+            <div class="client-logo-box font-mono">&lt;RS/&gt;</div>
+            <h3 class="client-org-name">Radio Sunwal</h3>
+            <p class="client-work-type">Live Streaming &amp; Community News Web Platform</p>
+            <blockquote class="client-testimonial">
+              "Prabhu redesigned our broadcasting platform from scratch. The pure semantic code loads instantly, and the radio stream is 100% stable."
+            </blockquote>
+          </div>
+
+          <!-- Client 2 -->
+          <div class="client-card">
+            <div class="client-logo-box font-mono">&lt;LC/&gt;</div>
+            <h3 class="client-org-name">Leo Club Organization</h3>
+            <p class="client-work-type">Regional Administrative Portal &amp; Event Logs Database</p>
+            <blockquote class="client-testimonial">
+              "Our members can now coordinate activities and log community events effortlessly. Prabhu's database design transformed our logistics."
+            </blockquote>
+          </div>
+
+          <!-- Client 3 -->
+          <div class="client-card">
+            <div class="client-logo-box font-mono">&lt;ZE/&gt;</div>
+            <h3 class="client-org-name">Zenith Local Businesses</h3>
+            <p class="client-work-type">E-Commerce Architecture &amp; Client Onboarding Portals</p>
+            <blockquote class="client-testimonial">
+              "A premium responsive storefront built with vanilla code that loads in fractions of a second on mobile. Our revenue increased by 30%."
+            </blockquote>
+          </div>
+
+          <!-- Client 4 -->
+          <div class="client-card">
+            <div class="client-logo-box font-mono">&lt;SC/&gt;</div>
+            <h3 class="client-org-name">Dr. Shrestha Clinic</h3>
+            <p class="client-work-type">Local Search Optimization &amp; Patient Booking Engine</p>
+            <blockquote class="client-testimonial">
+              "Prabhu audited our security and redesigned our patient booking path. Our online search visibility doubled in less than three months."
+            </blockquote>
+          </div>
+
+          <!-- Client 5 -->
+          <div class="client-card">
+            <div class="client-logo-box font-mono">&lt;PB/&gt;</div>
+            <h3 class="client-org-name">Personal Brands</h3>
+            <p class="client-work-type">Visual Identity, Portfolios &amp; AdSense Compliant Blogs</p>
+            <blockquote class="client-testimonial">
+              "As a creative professional, I needed an elegant portfolio that represents my work. Prabhu's code is gorgeous and easily got AdSense approved."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Experience Timeline Section -->
+    <section id="timeline" class="timeline-section section-padding">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Professional Chronology</span>
+          <h2 class="section-title">My Professional Journey</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date font-mono">2025 - 2026</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Lead Technology Consultant &amp; Full Stack Developer</h3>
+              <h4 class="timeline-org font-mono">Creative Digital Solutions</h4>
+              <p class="timeline-desc">
+                Currently leading the architectural blueprints, code safety reviews, and performance audits for local business systems and regional community organisations. Specializing in secure web applications, database performance, and designing AdSense-friendly blog structures.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Successfully audited and optimized 15+ corporate platforms for speed and security.</li>
+                <li>Pioneered lightweight client solutions utilizing pure, dependency-free vanilla JS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date font-mono">2023 - 2024</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Website Developer &amp; Project Lead</h3>
+              <h4 class="timeline-org font-mono">Radio Sunwal &amp; Regional Partnerships</h4>
+              <p class="timeline-desc">
+                Engineered the responsive streaming website for Radio Sunwal. Built dynamic news feeds, digital scheduling calendars, and coordinated event logistics databases for community hubs, aligning their regional presence with modern standards.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Integrated stable, low-latency live media streams with custom HTML5 audio controls.</li>
+                <li>Increased regional mobile listener retention rates by 60%.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date font-mono">2021 - 2022</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">UI/UX Designer &amp; Frontend Programmer</h3>
+              <h4 class="timeline-org font-mono">Independent Creative Consulting</h4>
+              <p class="timeline-desc">
+                Designed high-fidelity mockups, established visual typography guidelines, and developed clean, hand-crafted responsive interfaces for medical clinics, local services, and professional portfolios.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Crafted 25+ custom layouts, ensuring 100% responsiveness on mobile and tablet.</li>
+                <li>Earned reputations for achieving perfect 100/100 Google Lighthouse scores.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Blog / Articles Section (AdSense Ready) -->
+    <section id="blog" class="blog-section section-padding bg-alt">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Valuable Resources</span>
+          <h2 class="section-title">Latest Articles &amp; Insights</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="blog-grid">
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-card-content">
+              <div class="blog-meta font-mono">July 10, 2026 • 6 min read</div>
+              <h3 class="blog-title">Optimizing Web Performance: The Shift Back to Semantic Vanilla Architectures</h3>
+              <p class="blog-excerpt">
+                Why modern developers are discarding heavy frameworks to write lightweight, dependency-free HTML5 and native scripts to maximize conversion rates.
+              </p>
+              <button class="blog-read-btn font-mono text-uppercase" data-article="trends">Read Full Article →</button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-card-content">
+              <div class="blog-meta font-mono">June 25, 2026 • 5 min read</div>
+              <h3 class="blog-title">The Absolute Importance of Responsive Website Design in 2026</h3>
+              <p class="blog-excerpt">
+                An analytical review of fluid grid constraints, mobile search engine priority, and optimizing touch zones to keep visitor retention high.
+              </p>
+              <button class="blog-read-btn font-mono text-uppercase" data-article="responsive">Read Full Article →</button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-card-content">
+              <div class="blog-meta font-mono">May 14, 2026 • 8 min read</div>
+              <h3 class="blog-title">My Career Journey as a Full Stack Web Developer</h3>
+              <p class="blog-excerpt">
+                Reflections on bridging the technical gap between systematic relational database design and clean, client-side typography hierarchies.
+              </p>
+              <button class="blog-read-btn font-mono text-uppercase" data-article="journey">Read Full Article →</button>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div class="blog-card-content">
+              <div class="blog-meta font-mono">April 02, 2026 • 7 min read</div>
+              <h3 class="blog-title">How Specialized Technology Helps Modern Businesses Grow</h3>
+              <p class="blog-excerpt">
+                How custom portal automations and local SEO optimization generate quantifiable business returns and streamline administrative hours.
+              </p>
+              <button class="blog-read-btn font-mono text-uppercase" data-article="business">Read Full Article →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-title-container">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Start Your Digital Project</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3>Direct Contact Coordinates</h3>
+            <p class="contact-intro">
+              Have questions regarding system architecture, database design, or responsive portfolios? Reach out directly using the coordinates below, or submit the secure form.
+            </p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Professional Email</span>
+                  <a href="mailto:prabhumahatchhetry@gmail.com" class="info-value">prabhumahatchhetry@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Active Work Location</span>
+                  <span class="info-value">Global Remote Client Services</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Operational Hours</span>
+                  <span class="info-value">Mon - Fri, 8:00 AM - 6:00 PM (GMT Kathmandu, Nepal)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-channels">
+                <h4>Social Channels</h4>
+                <div class="social-icons">
+
+                  <!-- Facebook -->
+                  <a href="https://facebook.com/parbhu.0723" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                  </a>
+
+                  <!-- Instagram -->
+                  <a href="https://instagram.com/parbhu.0723" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                  </a>
+
+                  <!-- TikTok -->
+                  <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.35h-3.1v13.2a2.67 2.67 0 1 1-2.67-2.67c.26 0 .51.04.75.11V9.82a5.78 5.78 0 1 0 5.03 5.72V8.92a7.9 7.9 0 0 0 4.76 1.6V6.69z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <div class="contact-form-card" id="form-container">
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="form-name">Your Full Name <span class="required-star">*</span></label>
+                  <input type="text" id="form-name" placeholder="Ram Bahadur Sharma" required>
+                  <span class="field-error-message">This field is required. Enter your full name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Your Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="form-email" placeholder="rambahadur@mail.com" required>
+                  <span class="field-error-message">You don't even know your mail id, Huh ? Enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Project Category or Subject <span class="required-star">*</span></label>
+                <input type="text" id="form-subject" placeholder="E.g., Web Application Development Request" required>
+                <span class="field-error-message">This field is required. Subject is missing.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Detailed Requirements <span class="required-star">*</span></label>
+                <textarea id="form-message" rows="5" placeholder="Outline your technical specifications, business constraints, or desired launch timeframe..." required></textarea>
+                <span class="field-error-message">Please enter your message details.</span>
+              </div>
+
+              <!-- Security Math Captcha (Anti-spam) -->
+              <div class="form-group captcha-group">
+                <label for="form-captcha">Security Check: <span id="captcha-math-problem" class="font-mono">5 + 4</span> = <span class="required-star">*</span></label>
+                <input type="number" id="form-captcha" placeholder="Answer" required>
+                <span class="field-error-message">That's basic Math bro!! Try ur luck again.</span>
+              </div>
+
+              <button type="submit" class="submit-btn font-mono" id="submit-btn">Send Secure Message</button>
+            </form>
+
+            <!-- Interactive Success State Display -->
+            <div class="form-success-box" id="form-success-box" style="display: none;">
+              <div class="success-icon">✓</div>
+              <div class="success-text">
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for initiating contact. Prabhu Mahat Chhetry has received your request and will review your technical specifications. A secure response will be sent to your email (<strong id="user-email-display"></strong>) within 24 business hours.</p>
+                <button id="form-reset-btn" class="btn btn-outline btn-sm font-mono mt-4">Send Another Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo">&lt;prabhu.dev/&gt;</span>
+        <p class="footer-about-text">
+          Providing high-performance, secure full-stack web applications, custom organization portals, UI/UX system design, and specialized technical consulting globally.
+        </p>
+        <div class="footer-status font-mono">
+          <span class="status-indicator animate-pulse"></span> Service Status: ACTIVE
+        </div>
+      </div>
+      
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home Base</a></li>
+          <li><a href="#about">About Prabhu</a></li>
+          <li><a href="#services">Professional Services</a></li>
+          <li><a href="#projects">Work Portfolio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Collaborations</h4>
+        <ul>
+          <li><a href="#clients">Clients Served</a></li>
+          <li><a href="#timeline">Journey Timeline</a></li>
+          <li><a href="#blog">Technical Blog</a></li>
+          <li><a href="#contact">Contact Coordinates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>AdSense Compliance</h4>
+        <ul>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Page</a></li>
+          <li><a href="/contact.html">Contact Page</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p class="copyright">&copy; 2025 Prabhu Mahat Chhetry. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dynamic Modal 1: Article Reader Overlay -->
+  <div class="modal-wrapper" id="article-modal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-actions">
+          <button id="modal-font-decrease" class="modal-action-btn" title="Decrease font size">A-</button>
+          <button id="modal-font-increase" class="modal-action-btn" title="Increase font size">A+</button>
+          <button id="modal-theme-toggle" class="modal-action-btn" title="Toggle article visual mode">◑</button>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="article-modal-content">
+        <!-- Filled dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Back To Top Trigger -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Core Vanilla Script -->
+  <script src="/script.js"></script>
+</body>
+</html>

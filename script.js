@@ -581,82 +581,88 @@ emailjs.init({
 // Elements
 // ===============================
 const contactForm = document.getElementById("contact-form");
-const submitBtn = document.getElementById("submit-btn");
-const successBox = document.getElementById("form-success-box");
-const emailDisplay = document.getElementById("user-email-display");
-const resetBtn = document.getElementById("form-reset-btn");
 
-// ===============================
-// Submit Form
-// ===============================
-contactForm.addEventListener("submit", function (e) {
+if (contactForm) {
 
-    e.preventDefault();
+    const submitBtn = document.getElementById("submit-btn");
+    const successBox = document.getElementById("form-success-box");
+    const emailDisplay = document.getElementById("user-email-display");
+    const resetBtn = document.getElementById("form-reset-btn");
 
-    // Browser validation
-    if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
-        return;
-    }
+    // ===============================
+    // Submit Form
+    // ===============================
+    contactForm.addEventListener("submit", function (e) {
 
-    const name = document.getElementById("form-name").value.trim();
-    const email = document.getElementById("form-email").value.trim();
-    const subject = document.getElementById("form-subject").value.trim();
-    const message = document.getElementById("form-message").value.trim();
-    const captcha = document.getElementById("form-captcha").value.trim();
+        e.preventDefault();
 
-  
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending...";
-
-    emailjs.send(
-        "service_uc9f26b",
-        "template_fmq34f4",
-        {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message
+        // Browser validation
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
         }
-    )
 
-    .then(function () {
+        const name = document.getElementById("form-name").value.trim();
+        const email = document.getElementById("form-email").value.trim();
+        const subject = document.getElementById("form-subject").value.trim();
+        const message = document.getElementById("form-message").value.trim();
+        const captcha = document.getElementById("form-captcha").value.trim();
 
-        emailDisplay.textContent = email;
+        
 
-        contactForm.style.display = "none";
-        successBox.style.display = "flex";
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
 
-        contactForm.reset();
+        emailjs.send(
+            "service_uc9f26b",
+            "template_fmq34f4",
+            {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            }
+        )
 
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Send Secure Message";
+        .then(function () {
 
-    })
+            emailDisplay.textContent = email;
 
-    .catch(function (error) {
+            contactForm.style.display = "none";
+            successBox.style.display = "flex";
 
-        console.error(error);
+            contactForm.reset();
 
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Send Secure Message";
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Secure Message";
+
+        })
+
+        .catch(function (error) {
+
+            console.error(error);
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Secure Message";
+
+        });
 
     });
 
-});
+    // ===============================
+    // Reset Form
+    // ===============================
+    if (resetBtn) {
 
-// ===============================
-// Reset Form
-// ===============================
-if (resetBtn) {
+        resetBtn.addEventListener("click", function () {
 
-    resetBtn.addEventListener("click", function () {
+            contactForm.reset();
 
-        contactForm.reset();
+            successBox.style.display = "none";
+            contactForm.style.display = "block";
 
-        successBox.style.display = "none";
-        contactForm.style.display = "block";
+        });
 
-    });
+    }
 
 }

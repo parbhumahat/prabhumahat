@@ -605,13 +605,7 @@ contactForm.addEventListener("submit", function (e) {
     const message = document.getElementById("form-message").value.trim();
     const captcha = document.getElementById("form-captcha").value.trim();
 
-    // Captcha
-    if (captcha !== "9") {
-        document.getElementById("form-captcha").value = "";
-        document.getElementById("form-captcha").focus();
-        return;
-    }
-
+  
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 

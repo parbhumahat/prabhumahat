@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -99,58 +102,59 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.35h-3.1v13.2a2.67 2.67 0 1 1-2.67-2.67c.26 0 .51.04.75.11V9.82a5.78 5.78 0 1 0 5.03 5.72V8.92a7.9 7.9 0 0 0 4.76 1.6V6.69z"/>
                     </svg>
+                  </a>
             </div>
           </div>
         </div>
 
         <div class="contact-form-card" id="form-container">
-          <form id="contact-form" novalidate>
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="form-name">Your Full Name <span class="required-star">*</span></label>
-                <input type="text" id="form-name" placeholder="E.g., Dr. Shrestha" required>
-                <span class="field-error-message">This field is required. Please enter your name.</span>
+            <form id="contact-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="form-name">Your Full Name <span class="required-star">*</span></label>
+                  <input type="text" id="form-name" placeholder="Ram Bahadur Sharma" required>
+                  <span class="field-error-message">This field is required. Enter your full name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Your Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="form-email" placeholder="rambahadur@mail.com" required>
+                  <span class="field-error-message">You don't even know your mail id, Huh ? Enter a valid email address.</span>
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="form-email">Your Email Address <span class="required-star">*</span></label>
-                <input type="email" id="form-email" placeholder="E.g., client@clinic.com" required>
-                <span class="field-error-message">Please enter a valid email address.</span>
+                <label for="form-subject">Project Category or Subject <span class="required-star">*</span></label>
+                <input type="text" id="form-subject" placeholder="E.g., Web Application Development Request" required>
+                <span class="field-error-message">This field is required. Subject is missing.</span>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="form-subject">Project Category or Subject <span class="required-star">*</span></label>
-              <input type="text" id="form-subject" placeholder="E.g., Web Application Development Request" required>
-              <span class="field-error-message">This field is required. Please enter a subject.</span>
-            </div>
+              <div class="form-group">
+                <label for="form-message">Detailed Requirements <span class="required-star">*</span></label>
+                <textarea id="form-message" rows="5" placeholder="Outline your technical specifications, business constraints, or desired launch timeframe..." required></textarea>
+                <span class="field-error-message">Please enter your message details.</span>
+              </div>
 
-            <div class="form-group">
-              <label for="form-message">Detailed Requirements <span class="required-star">*</span></label>
-              <textarea id="form-message" rows="5" placeholder="Outline your technical specifications, business constraints, or desired launch timeframe..." required></textarea>
-              <span class="field-error-message">Please enter your message details.</span>
-            </div>
+              <!-- Security Math Captcha (Anti-spam) -->
+              <div class="form-group captcha-group">
+                <label for="form-captcha">Security Check: <span id="captcha-math-problem" class="font-mono">5 + 4</span> = <span class="required-star">*</span></label>
+                <input type="number" id="form-captcha" placeholder="Answer" required>
+                <span class="field-error-message">That's basic Math bro!! Try ur luck again.</span>
+              </div>
 
-            <!-- Security Math Captcha (Anti-spam) -->
-            <div class="form-group captcha-group">
-              <label for="form-captcha">Security Check: <span id="captcha-math-problem" class="font-mono">5 + 4</span> = <span class="required-star">*</span></label>
-              <input type="number" id="form-captcha" placeholder="Your Answer" required>
-              <span class="field-error-message">Incorrect calculation. Please try again.</span>
-            </div>
+              <button type="submit" class="submit-btn font-mono" id="submit-btn">Send Secure Message</button>
+            </form>
 
-            <button type="submit" class="submit-btn font-mono" id="submit-btn">Send Secure Message</button>
-          </form>
-
-          <!-- Interactive Success State Display -->
-          <div class="form-success-box" id="form-success-box" style="display: none;">
-            <div class="success-icon">✓</div>
-            <div class="success-text">
-              <h3>Message Sent Successfully!</h3>
-              <p>Thank you for initiating contact. Prabhu Mahat Chhetry has received your request and will review your technical specifications. A secure response will be sent to your email (<strong id="user-email-display"></strong>) within 24 business hours.</p>
-              <button id="form-reset-btn" class="btn btn-outline btn-sm font-mono mt-4">Send Another Message</button>
+            <!-- Interactive Success State Display -->
+            <div class="form-success-box" id="form-success-box" style="display: none;">
+              <div class="success-icon">✓</div>
+              <div class="success-text">
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for initiating contact. Prabhu Mahat Chhetry has received your request and will review your technical specifications. A secure response will be sent to your email (<strong id="user-email-display"></strong>) within 24 business hours.</p>
+                <button id="form-reset-btn" class="btn btn-outline btn-sm font-mono mt-4">Send Another Message</button>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </main>
@@ -259,6 +263,104 @@
         generateCaptcha();
       });
     });
+
+
+
+    // ===============================
+// EmailJS Initialize
+// ===============================
+emailjs.init({
+    publicKey: "B4rL9QddFRMW2_r9t",
+});
+
+// ===============================
+// Elements
+// ===============================
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    const submitBtn = document.getElementById("submit-btn");
+    const successBox = document.getElementById("form-success-box");
+    const emailDisplay = document.getElementById("user-email-display");
+    const resetBtn = document.getElementById("form-reset-btn");
+
+    // ===============================
+    // Submit Form
+    // ===============================
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        // Browser validation
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById("form-name").value.trim();
+        const email = document.getElementById("form-email").value.trim();
+        const subject = document.getElementById("form-subject").value.trim();
+        const message = document.getElementById("form-message").value.trim();
+        const captcha = document.getElementById("form-captcha").value.trim();
+
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        emailjs.send(
+            "service_uc9f26b",
+            "template_fmq34f4",
+            {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            }
+        )
+
+        .then(function () {
+
+            emailDisplay.textContent = email;
+
+            contactForm.style.display = "none";
+            successBox.style.display = "flex";
+
+            contactForm.reset();
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Secure Message";
+
+        })
+
+        .catch(function (error) {
+
+            console.error(error);
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Secure Message";
+
+        });
+
+    });
+
+    // ===============================
+    // Reset Form
+    // ===============================
+    if (resetBtn) {
+
+        resetBtn.addEventListener("click", function () {
+
+            contactForm.reset();
+
+            successBox.style.display = "none";
+            contactForm.style.display = "block";
+
+        });
+
+    }
+
+}
   </script>
 </body>
 </html>
